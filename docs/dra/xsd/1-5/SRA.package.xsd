@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- INSDC Sequence Read Archive resource package object XML specification -->
-<!-- version:1.5.5 -->
+<!-- version:1.5.6 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:com="SRA.common" xmlns:ann="SRA.annotation">
 
     <xs:include schemaLocation="SRA.submission.xsd"/>
