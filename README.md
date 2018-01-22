@@ -4,21 +4,17 @@ DDBJ Center repository for public files
 ## docs  
 
 * XML schema  
-
-## defs
-
-* Definitions  
-	* BioSample packages     
+* BioSample attributes and packages     
 
 ## rules  
 
 * Validation rules  
 
-## glossaries  
-
-* Glossaries for tooltip in the submission system   
-
 ## stats   
 
 * Statistics     
+
+## glossaries  
+
+* Glossaries for tooltip in the submission system   
 
