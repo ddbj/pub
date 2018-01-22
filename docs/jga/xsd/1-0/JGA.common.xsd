@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- DDBJ JGA Common object XML specification -->
-<!-- version:1.0.8 -->
+<!-- version:1.0.9 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:com="JGA.common" targetNamespace="JGA.common">
   <xs:attributeGroup name="NameGroup">
     <xs:attribute name="alias" type="xs:string" use="optional">
@@ -510,6 +510,7 @@
                         <xs:enumeration value="Illumina HiSeq 3000"/>
                         <xs:enumeration value="Illumina HiSeq 4000"/>
                         <xs:enumeration value="NextSeq 550"/>
+                        <xs:enumeration value="Illumina MiniSeq"/>
                         <xs:enumeration value="unspecified"/>
                       </xs:restriction>
                     </xs:simpleType>
@@ -595,6 +596,8 @@
                       <xs:restriction base="xs:string">
                         <xs:enumeration value="Ion Torrent PGM"/>
                         <xs:enumeration value="Ion Torrent Proton"/>
+                        <xs:enumeration value="Ion Torrent S5"/>
+                        <xs:enumeration value="Ion Torrent S5 XL"/>
                         <xs:enumeration value="unspecified"/>
                       </xs:restriction>
                     </xs:simpleType>

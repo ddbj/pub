@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- DDBJ JGA Study object XML specification -->
-<!-- version:1.0.8 -->
+<!-- version:1.0.9 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:com="JGA.common">
 <xs:import schemaLocation="JGA.common.xsd" namespace="JGA.common"/>
 
