@@ -14,6 +14,10 @@ DDBJ Center repository for public files
 
 * Validation rules  
 
+## glossaries  
+
+* Glossaries for tooltip in the submission system   
+
 ## stats   
 
 * Statistics     
