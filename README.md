@@ -14,7 +14,5 @@ DDBJ Center repository for public files
 
 * Statistics     
 
-## glossaries  
 
-* Glossaries for tooltip in the submission system   
 
