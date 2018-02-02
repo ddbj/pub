@@ -1,4 +1,4 @@
-Rank	Organisms	Nucleotides	Entries
+Rank	Organism	Nucleotides	Entries
 1	Homo sapiens	198661933984	31675222
 2	marine metagenome	92325192108	82308996
 3	Triticum aestivum	57526239745	30639828
