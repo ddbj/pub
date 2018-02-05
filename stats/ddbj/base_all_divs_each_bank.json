@@ -1,4 +1,4 @@
-[{"division":"taxonomic & env","DDBJ":5133764958,"DDBJ_proportion":4.58,"EMBL":33944000595,"EMBL_proportion":6.98,"GenBank":75934498187,"GenBank_proportion":3.45},
+[{"division":"Taxonomic & Env","DDBJ":5133764958,"DDBJ_proportion":4.58,"EMBL":33944000595,"EMBL_proportion":6.98,"GenBank":75934498187,"GenBank_proportion":3.45},
 {"division":"SYN","DDBJ":38576788,"DDBJ_proportion":0.03,"EMBL":91744370,"EMBL_proportion":0.02,"GenBank":1050531693,"GenBank_proportion":0.05},
 {"division":"EST","DDBJ":8565743950,"DDBJ_proportion":7.64,"EMBL":3850182829,"EMBL_proportion":0.79,"GenBank":30789845115,"GenBank_proportion":1.4},
 {"division":"TSA","DDBJ":8764065761,"DDBJ_proportion":7.81,"EMBL":8884807849,"EMBL_proportion":1.83,"GenBank":170747292608,"GenBank_proportion":7.76},
