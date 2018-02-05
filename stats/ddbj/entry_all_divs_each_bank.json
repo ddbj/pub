@@ -1,0 +1,11 @@
+[{"division":"taxonomic & env","DDBJ":1296921,"DDBJ_proportion":1.86,"EMBL":5181362,"EMBL_proportion":1.98,"GenBank":23009028,"GenBank_proportion":3.8},
+{"division":"SYN","DDBJ":33007,"DDBJ_proportion":0.05,"EMBL":33623,"EMBL_proportion":0.01,"GenBank":207676,"GenBank_proportion":0.03},
+{"division":"EST","DDBJ":15981764,"DDBJ_proportion":22.92,"EMBL":6243306,"EMBL_proportion":2.39,"GenBank":54993353,"GenBank_proportion":9.08},
+{"division":"TSA","DDBJ":8857089,"DDBJ_proportion":12.7,"EMBL":10889406,"EMBL_proportion":4.17,"GenBank":193260204,"GenBank_proportion":31.92},
+{"division":"GSS","DDBJ":5320539,"DDBJ_proportion":7.63,"EMBL":4962490,"EMBL_proportion":1.9,"GenBank":29979919,"GenBank_proportion":4.95},
+{"division":"HTC","DDBJ":310287,"DDBJ_proportion":0.44,"EMBL":150510,"EMBL_proportion":0.06,"GenBank":111494,"GenBank_proportion":0.02},
+{"division":"HTG","DDBJ":3656,"DDBJ_proportion":0.01,"EMBL":23873,"EMBL_proportion":0.01,"GenBank":147793,"GenBank_proportion":0.02},
+{"division":"STS","DDBJ":40133,"DDBJ_proportion":0.06,"EMBL":81787,"EMBL_proportion":0.03,"GenBank":1224947,"GenBank_proportion":0.2},
+{"division":"PAT","DDBJ":14651215,"DDBJ_proportion":21.01,"EMBL":13581220,"EMBL_proportion":5.2,"GenBank":11468916,"GenBank_proportion":1.89},
+{"division":"WGS","DDBJ":23234658,"DDBJ_proportion":33.32,"EMBL":220069649,"EMBL_proportion":84.25,"GenBank":291066246,"GenBank_proportion":48.07},
+{"division":"Total","DDBJ":69729269,"DDBJ_proportion":"100.00","EMBL":261217226,"EMBL_proportion":"100.00","GenBank":605469576,"GenBank_proportion":"100.00"}]

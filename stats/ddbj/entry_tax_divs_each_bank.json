@@ -1,0 +1,12 @@
+[{"division":"HUM","DDBJ":83800,"DDBJ_proportion":6.46,"EMBL":127552,"EMBL_proportion":2.46,"GenBank":521035,"GenBank_proportion":2.26},
+{"division":"PRI","DDBJ":20087,"DDBJ_proportion":1.55,"EMBL":7246,"EMBL_proportion":0.14,"GenBank":120077,"GenBank_proportion":0.52},
+{"division":"ROD","DDBJ":42104,"DDBJ_proportion":3.25,"EMBL":56822,"EMBL_proportion":1.1,"GenBank":441881,"GenBank_proportion":1.92},
+{"division":"MAM","DDBJ":23971,"DDBJ_proportion":1.85,"EMBL":50087,"EMBL_proportion":0.97,"GenBank":432982,"GenBank_proportion":1.88},
+{"division":"VRT","DDBJ":94422,"DDBJ_proportion":7.28,"EMBL":439200,"EMBL_proportion":8.48,"GenBank":2259506,"GenBank_proportion":9.82},
+{"division":"INV","DDBJ":216132,"DDBJ_proportion":16.67,"EMBL":3139215,"EMBL_proportion":60.59,"GenBank":3829067,"GenBank_proportion":16.64},
+{"division":"PLN","DDBJ":298601,"DDBJ_proportion":23.02,"EMBL":437174,"EMBL_proportion":8.44,"GenBank":3968896,"GenBank_proportion":17.25},
+{"division":"BCT","DDBJ":127240,"DDBJ_proportion":9.81,"EMBL":148926,"EMBL_proportion":2.87,"GenBank":1371892,"GenBank_proportion":5.96},
+{"division":"VRL","DDBJ":113937,"DDBJ_proportion":8.79,"EMBL":108085,"EMBL_proportion":2.09,"GenBank":2184669,"GenBank_proportion":9.49},
+{"division":"PHG","DDBJ":395,"DDBJ_proportion":0.03,"EMBL":1108,"EMBL_proportion":0.02,"GenBank":11380,"GenBank_proportion":0.05},
+{"division":"ENV","DDBJ":276232,"DDBJ_proportion":21.3,"EMBL":665947,"EMBL_proportion":12.85,"GenBank":7867643,"GenBank_proportion":34.19},
+{"division":"Total","DDBJ":1296921,"DDBJ_proportion":"100.00","EMBL":5181362,"EMBL_proportion":"100.00","GenBank":23009028,"GenBank_proportion":"100.00"}]

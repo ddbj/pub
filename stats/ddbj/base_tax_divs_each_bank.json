@@ -1,0 +1,12 @@
+[{"division":"HUM","DDBJ":438321177,"DDBJ_proportion":8.54,"EMBL":1218899507,"EMBL_proportion":3.59,"GenBank":4129600297,"GenBank_proportion":5.44},
+{"division":"PRI","DDBJ":94947325,"DDBJ_proportion":1.85,"EMBL":826273947,"EMBL_proportion":2.43,"GenBank":1382056577,"GenBank_proportion":1.82},
+{"division":"ROD","DDBJ":52575835,"DDBJ_proportion":1.02,"EMBL":933511091,"EMBL_proportion":2.75,"GenBank":3538506923,"GenBank_proportion":4.66},
+{"division":"MAM","DDBJ":33716851,"DDBJ_proportion":0.66,"EMBL":497955461,"EMBL_proportion":1.47,"GenBank":3352166661,"GenBank_proportion":4.41},
+{"division":"VRT","DDBJ":129715738,"DDBJ_proportion":2.53,"EMBL":5011408513,"EMBL_proportion":14.76,"GenBank":4151856409,"GenBank_proportion":5.47},
+{"division":"INV","DDBJ":323095233,"DDBJ_proportion":6.29,"EMBL":13351729592,"EMBL_proportion":39.33,"GenBank":3869386518,"GenBank_proportion":5.1},
+{"division":"PLN","DDBJ":1758907413,"DDBJ_proportion":34.26,"EMBL":6838407964,"EMBL_proportion":20.15,"GenBank":10601370069,"GenBank_proportion":13.96},
+{"division":"BCT","DDBJ":1930390338,"DDBJ_proportion":37.6,"EMBL":4680864880,"EMBL_proportion":13.79,"GenBank":36200804703,"GenBank_proportion":47.67},
+{"division":"VRL","DDBJ":148196056,"DDBJ_proportion":2.89,"EMBL":135871538,"EMBL_proportion":0.4,"GenBank":3353531262,"GenBank_proportion":4.42},
+{"division":"PHG","DDBJ":10178614,"DDBJ_proportion":0.2,"EMBL":18705088,"EMBL_proportion":0.06,"GenBank":345758353,"GenBank_proportion":0.46},
+{"division":"ENV","DDBJ":213720378,"DDBJ_proportion":4.16,"EMBL":430373014,"EMBL_proportion":1.27,"GenBank":5009460415,"GenBank_proportion":6.6},
+{"division":"Total","DDBJ":5133764958,"DDBJ_proportion":"100.00","EMBL":33944000595,"EMBL_proportion":"100.00","GenBank":75934498187,"GenBank_proportion":"100.00"}]
