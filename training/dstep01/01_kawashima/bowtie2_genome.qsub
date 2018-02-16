@@ -1,0 +1,25 @@
+#!/bin/sh
+#$ -S /bin/sh
+#$ -cwd 
+#$ -l s_vmem=2G,mem_req=2G
+#$ -l short
+#$ -pe def_slot 1
+#$ -o ./log
+#$ -e ./log
+
+source ~/.bashrc
+
+wget ftp://ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/ERA013/ERA013570/ERX007496/ERR019010_1.fastq.bz2
+wget ftp://ftp.ddbj.nig.ac.jp/ddbj_database/dra/fastq/ERA013/ERA013570/ERX007496/ERR019010_2.fastq.bz2
+bunzip2 ERR019010*.fastq.bz2
+
+bowtie2 -q -x Danio_rerio.GRCz10.dna.chromosome.9.fa -1 ERR019010_1.fastq -2 ERR019010_2.fastq -S danio_ERR019010.sam
+
+samtools view -bt Danio_rerio.GRCz10.dna.chromosome.9.fa -o danio_ERR019010.bam danio_ERR019010.sam
+samtools sort -o danio_ERR019010.sorted.bam danio_ERR019010.bam 
+samtools index danio_ERR019010.sorted.bam
+samtools faidx Danio_rerio.GRCz10.dna.chromosome.9.fa
+
+samtools mpileup -vuf Danio_rerio.GRCz10.dna.chromosome.9.fa danio_ERR019010.sorted.bam >danio_ERR019010.vcf
+
+
