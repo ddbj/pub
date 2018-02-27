@@ -12,6 +12,15 @@
       <xs:element name="BioSample" type="typeBioSample" maxOccurs="unbounded">
       </xs:element>
     </xs:sequence>
+    <xs:attribute name="submitter_id" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>submitter id</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="submission_id" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>submission id</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>    
   </xs:complexType>
-
 </xs:schema>
