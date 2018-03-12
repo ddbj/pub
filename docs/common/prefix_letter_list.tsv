@@ -1,0 +1,385 @@
+db	prefix	data_source	comment
+ddbj_conventional	A	EPO	Patent application
+ddbj_conventional	AA	GenBank	EST
+ddbj_conventional	AB	DDBJ	Direct submission
+ddbj_conventional	AC	GenBank	HTG
+ddbj_conventional	AD	GenBank	Sequences received at GSDB
+ddbj_conventional	AE	GenBank	Genome project data
+ddbj_conventional	AF	GenBank	Direct submission
+ddbj_conventional	AG	DDBJ	GSS
+ddbj_conventional	AH	GenBank	CON
+ddbj_conventional	AI	GenBank	Other project
+ddbj_conventional	AJ	ENA	Direct submission
+ddbj_conventional	AK	DDBJ	FLI_cDNA
+ddbj_conventional	AL	ENA	Genome project data
+ddbj_conventional	AM	ENA	Direct submission
+ddbj_conventional	AN	ENA	CON
+ddbj_conventional	AP	DDBJ	Genome project data
+ddbj_conventional	AQ	GenBank	GSS
+ddbj_conventional	AR	USPTO	Patent application
+ddbj_conventional	AS	GenBank	Other project
+ddbj_conventional	AT	DDBJ	EST
+ddbj_conventional	AU	DDBJ	EST
+ddbj_conventional	AV	DDBJ	EST
+ddbj_conventional	AW	GenBank	EST
+ddbj_conventional	AX	EPO	Patent application
+ddbj_conventional	AY	GenBank	Direct submission
+ddbj_conventional	AZ	GenBank	GSS
+ddbj_conventional	B	GenBank	GSS (previously assigned to, but unused by, DDBJ)
+ddbj_conventional	BA	DDBJ	CON
+ddbj_conventional	BB	DDBJ	EST
+ddbj_conventional	BC	GenBank	cDNA project
+ddbj_conventional	BD	JPO	Patent application
+ddbj_conventional	BE	GenBank	EST
+ddbj_conventional	BF	GenBank	EST
+ddbj_conventional	BG	GenBank	EST
+ddbj_conventional	BH	GenBank	GSS
+ddbj_conventional	BI	GenBank	EST
+ddbj_conventional	BJ	DDBJ	EST
+ddbj_conventional	BK	GenBank	TPA
+ddbj_conventional	BL	GenBank	TPA (segmented set)
+ddbj_conventional	BM	GenBank	EST
+ddbj_conventional	BN	ENA	TPA
+ddbj_conventional	BP	DDBJ	EST
+ddbj_conventional	BQ	GenBank	EST
+ddbj_conventional	BR	DDBJ	TPA
+ddbj_conventional	BS	DDBJ	Genome project data
+ddbj_conventional	BT	GenBank	FLI_cDNA
+ddbj_conventional	BU	GenBank	EST
+ddbj_conventional	BV	GenBank	STS
+ddbj_conventional	BW	DDBJ	EST
+ddbj_conventional	BX	ENA	Genome project data
+ddbj_conventional	BY	DDBJ	EST
+ddbj_conventional	BZ	GenBank	GSS
+ddbj_conventional	C	DDBJ	
+ddbj_conventional	CA	GenBank	EST
+ddbj_conventional	CB	GenBank	EST
+ddbj_conventional	CC	GenBank	GSS
+ddbj_conventional	CD	GenBank	EST
+ddbj_conventional	CE	GenBank	GSS
+ddbj_conventional	CF	GenBank	EST
+ddbj_conventional	CG	GenBank	GSS
+ddbj_conventional	CH	GenBank	CON
+ddbj_conventional	CI	DDBJ	EST
+ddbj_conventional	CJ	DDBJ	EST
+ddbj_conventional	CK	GenBank	EST
+ddbj_conventional	CL	GenBank	GSS
+ddbj_conventional	CM	GenBank	scaffold/CON
+ddbj_conventional	CN	GenBank	EST
+ddbj_conventional	CO	GenBank	EST
+ddbj_conventional	CP	GenBank	Genome project data
+ddbj_conventional	CQ	EPO	Patent application
+ddbj_conventional	CR	ENA	Genome project data
+ddbj_conventional	CS	EPO	Patent application
+ddbj_conventional	CT	ENA	Genome project data
+ddbj_conventional	CU	ENA	Genome project data
+ddbj_conventional	CV	GenBank	EST
+ddbj_conventional	CW	GenBank	GSS
+ddbj_conventional	CX	GenBank	EST
+ddbj_conventional	CY	GenBank	Genome project data
+ddbj_conventional	CZ	GenBank	
+ddbj_conventional	D	DDBJ	
+ddbj_conventional	DA	DDBJ	EST
+ddbj_conventional	DB	DDBJ	EST
+ddbj_conventional	DC	DDBJ	EST
+ddbj_conventional	DD	JPO	Patent application
+ddbj_conventional	DE	DDBJ	GSS
+ddbj_conventional	DF	DDBJ	scaffold/CON
+ddbj_conventional	DG	DDBJ	CON
+ddbj_conventional	DH	DDBJ	GSS
+ddbj_conventional	DI	KIPO	Patent application
+ddbj_conventional	DJ	JPO	Patent application
+ddbj_conventional	DK	DDBJ	EST
+ddbj_conventional	DL	JPO	Patent application
+ddbj_conventional	DM	JPO	Patent application
+ddbj_conventional	DN	GenBank	EST
+ddbj_conventional	DO	void	
+ddbj_conventional	DP	GenBank	HTG scaffold (CON) records
+ddbj_conventional	DQ	GenBank	Direct submission
+ddbj_conventional	DR	GenBank	EST
+ddbj_conventional	DS	GenBank	scaffold/CON
+ddbj_conventional	DT	GenBank	EST
+ddbj_conventional	DU	GenBank	GSS
+ddbj_conventional	DV	GenBank	EST
+ddbj_conventional	DW	GenBank	EST
+ddbj_conventional	DX	GenBank	GSS
+ddbj_conventional	DY	GenBank	EST
+ddbj_conventional	DZ	USPTO	Patent application
+ddbj_conventional	E	JPO	Patent application
+ddbj_conventional	EA	USPTO	Patent application (pre-grant patent publication)
+ddbj_conventional	EB	GenBank	EST
+ddbj_conventional	EC	GenBank	EST
+ddbj_conventional	ED	GenBank	GSS
+ddbj_conventional	EE	GenBank	EST
+ddbj_conventional	EF	GenBank	Direct submission
+ddbj_conventional	EG	GenBank	EST
+ddbj_conventional	EH	GenBank	EST
+ddbj_conventional	EI	GenBank	GSS
+ddbj_conventional	EJ	GenBank	GSS
+ddbj_conventional	EK	GenBank	GSS
+ddbj_conventional	EL	GenBank	EST
+ddbj_conventional	EM	GenBank	
+ddbj_conventional	EN	GenBank	
+ddbj_conventional	EO	GenBank	
+ddbj_conventional	EP	GenBank	
+ddbj_conventional	EQ	GenBank	
+ddbj_conventional	ER	GenBank	GSS
+ddbj_conventional	ES	GenBank	EST
+ddbj_conventional	ET	GenBank	GSS
+ddbj_conventional	EU	GenBank	Direct submission
+ddbj_conventional	EV	GenBank	EST
+ddbj_conventional	EW	GenBank	EST
+ddbj_conventional	EX	GenBank	EST
+ddbj_conventional	EY	GenBank	EST
+ddbj_conventional	EZ	GenBank	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	F	ENA	EST
+ddbj_conventional	FA	GenBank	CON
+ddbj_conventional	FB	EPO	Patent application
+ddbj_conventional	FC	GenBank	EST
+ddbj_conventional	FD	GenBank	EST
+ddbj_conventional	FE	GenBank	EST
+ddbj_conventional	FF	GenBank	EST
+ddbj_conventional	FG	GenBank	EST
+ddbj_conventional	FH	GenBank	GSS
+ddbj_conventional	FI	GenBank	GSS
+ddbj_conventional	FJ	GenBank	Direct submission
+ddbj_conventional	FK	GenBank	EST
+ddbj_conventional	FL	GenBank	EST
+ddbj_conventional	FM	ENA	
+ddbj_conventional	FN	ENA	
+ddbj_conventional	FO	ENA	
+ddbj_conventional	FP	ENA	
+ddbj_conventional	FQ	ENA	
+ddbj_conventional	FR	ENA	
+ddbj_conventional	FS	DDBJ	EST
+ddbj_conventional	FT	DDBJ	GSS
+ddbj_conventional	FU	JPO	Patent application
+ddbj_conventional	FV	JPO	Patent application
+ddbj_conventional	FW	JPO	Patent application
+ddbj_conventional	FX	DDBJ	TSA
+ddbj_conventional	FY	DDBJ	EST
+ddbj_conventional	FZ	JPO	Patent application
+ddbj_conventional	G	GenBank	STS
+ddbj_conventional	GA	DDBJ	GSS
+ddbj_conventional	GB	JPO	Patent application
+ddbj_conventional	GC	USPTO	Patent application
+ddbj_conventional	GD	GenBank	EST
+ddbj_conventional	GE	GenBank	EST
+ddbj_conventional	GF	GenBank	STS
+ddbj_conventional	GG	GenBank	scaffold/CON
+ddbj_conventional	GH	GenBank	EST
+ddbj_conventional	GI	GenBank	
+ddbj_conventional	GJ	GenBank	TPA scaffolds
+ddbj_conventional	GK	GenBank	TPA WGS chromosomes
+ddbj_conventional	GL	GenBank	scaffold/CON
+ddbj_conventional	GM	EPO	Patent application
+ddbj_conventional	GN	EPO	Patent application
+ddbj_conventional	GO	GenBank	EST
+ddbj_conventional	GP	USPTO	Patent application
+ddbj_conventional	GQ	GenBank	Direct submission
+ddbj_conventional	GR	GenBank	EST
+ddbj_conventional	GS	GenBank	GSS
+ddbj_conventional	GT	GenBank	EST
+ddbj_conventional	GU	GenBank	Direct submission
+ddbj_conventional	GV	USPTO	Patent application
+ddbj_conventional	GW	GenBank	EST
+ddbj_conventional	GX	USPTO	Patent application
+ddbj_conventional	GY	USPTO	Patent application
+ddbj_conventional	GZ	USPTO	Patent application
+ddbj_conventional	H	GenBank	EST
+ddbj_conventional	HA	EPO	Patent application
+ddbj_conventional	HB	EPO	Patent application
+ddbj_conventional	HC	EPO	Patent application
+ddbj_conventional	HD	EPO	Patent application
+ddbj_conventional	HE	ENA	Direct submission
+ddbj_conventional	HF	ENA	Direct submission
+ddbj_conventional	HG	ENA	Direct submission
+ddbj_conventional	HH	EPO	Patent application
+ddbj_conventional	HI	EPO	Patent application
+ddbj_conventional	HJ	USPTO	Patent application
+ddbj_conventional	HK	USPTO	Patent application
+ddbj_conventional	HL	USPTO	Patent application
+ddbj_conventional	HM	GenBank	Direct submission
+ddbj_conventional	HN	GenBank	GSS
+ddbj_conventional	HO	GenBank	EST
+ddbj_conventional	HP	GenBank	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	HQ	GenBank	Direct submission
+ddbj_conventional	HR	GenBank	GSS
+ddbj_conventional	HS	GenBank	EST
+ddbj_conventional	HT	DDBJ	TPA WGS scaffolds
+ddbj_conventional	HU	DDBJ	TPA WGS chromosomes
+ddbj_conventional	HV	JPO	Patent application
+ddbj_conventional	HW	JPO	Patent application
+ddbj_conventional	HX	DDBJ	EST
+ddbj_conventional	HY	DDBJ	EST
+ddbj_conventional	HZ	JPO	Patent application
+ddbj_conventional	I	USPTO	Patent application
+ddbj_conventional	J	GenBank	
+ddbj_conventional	JA	EPO	Patent application
+ddbj_conventional	JB	EPO	Patent application
+ddbj_conventional	JC	EPO	Patent application
+ddbj_conventional	JD	EPO	Patent application
+ddbj_conventional	JE	EPO	Patent application
+ddbj_conventional	JF	GenBank	Direct submission
+ddbj_conventional	JG	GenBank	EST
+ddbj_conventional	JH	GenBank	scaffold/CON
+ddbj_conventional	JI	GenBank	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	JJ	GenBank	GSS
+ddbj_conventional	JK	GenBank	EST
+ddbj_conventional	JL	GenBank	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	JM	GenBank	GSS
+ddbj_conventional	JN	GenBank	Direct submission
+ddbj_conventional	JO	GenBank	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	JP	GenBank	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	JQ	GenBank	Direct submission
+ddbj_conventional	JR	GenBank	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	JS	GenBank	GSS
+ddbj_conventional	JT	GenBank	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	JU	GenBank	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	JV	GenBank	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	JW	GenBank	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	JX	GenBank	Direct submission
+ddbj_conventional	JY	GenBank	GSS
+ddbj_conventional	JZ	GenBank	EST
+ddbj_conventional	K	GenBank	
+ddbj_conventional	KA	GenBank	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	KB	GenBank	scaffold/CON
+ddbj_conventional	KC	GenBank	Direct submission
+ddbj_conventional	KD	GenBank	scaffold/CON
+ddbj_conventional	KE	GenBank	scaffold/CON
+ddbj_conventional	KF	GenBank	Direct submission
+ddbj_conventional	KG	GenBank	GSS
+ddbj_conventional	KH	USPTO	Patent application
+ddbj_conventional	KI	GenBank	scaffold/CON
+ddbj_conventional	KJ	GenBank	Direct submission
+ddbj_conventional	KK	GenBank	scaffold/CON
+ddbj_conventional	KL	GenBank	scaffold/CON
+ddbj_conventional	KM	GenBank	Direct submission
+ddbj_conventional	KN	GenBank	scaffold/CON
+ddbj_conventional	KO	GenBank	GSS
+ddbj_conventional	KP	GenBank	Direct submission
+ddbj_conventional	KQ	GenBank	scaffold/CON
+ddbj_conventional	KR	GenBank	Direct Submission
+ddbj_conventional	KS	GenBank	GSS
+ddbj_conventional	KT	GenBank	Direct submission
+ddbj_conventional	KU	GenBank	Direct submission
+ddbj_conventional	KV	GenBank	scaffold/CON
+ddbj_conventional	KX	GenBank	Direct submission
+ddbj_conventional	KY	GenBank	Direct submission
+ddbj_conventional	KZ	GenBank	scaffold/CON
+ddbj_conventional	L	GenBank	
+ddbj_conventional	LA	DDBJ	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	LB	DDBJ	GSS
+ddbj_conventional	LC	DDBJ	Direct submission
+ddbj_conventional	LD	DDBJ	scaffold/CON
+ddbj_conventional	LE	DDBJ	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	LF	JPO	Patent application
+ddbj_conventional	LG	KIPO	Patent application
+ddbj_conventional	LH	DDBJ	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	LI	DDBJ	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	LJ	DDBJ	TSA (Transcriptome Shotgun Assembly)
+ddbj_conventional	LK	ENA	
+ddbj_conventional	LL	ENA	
+ddbj_conventional	LM	ENA	
+ddbj_conventional	LN	ENA	
+ddbj_conventional	LO	ENA	
+ddbj_conventional	LP	ENA	
+ddbj_conventional	LQ	ENA	
+ddbj_conventional	LR	ENA	
+ddbj_conventional	LS	ENA	
+ddbj_conventional	LT	ENA	
+ddbj_conventional	LU	DDBJ	EST
+ddbj_conventional	LV	JPO	Patent application
+ddbj_conventional	LX	JPO	Patent application
+ddbj_conventional	LY	KIPO	Patent application
+ddbj_conventional	LZ	JPO	Patent application
+ddbj_conventional	M	GenBank	
+ddbj_conventional	MA	JPO	Patent application
+ddbj_conventional	MB	JPO	Patent application
+ddbj_conventional	MC	DDBJ	
+ddbj_conventional	MD	DDBJ	
+ddbj_conventional	ME	DDBJ	
+ddbj_conventional	MF	GenBank	Direct submission
+ddbj_conventional	MG	GenBank	Direct submission
+ddbj_conventional	MH	GenBank	Direct submission
+ddbj_conventional	MI	USPTO	Patent application
+ddbj_conventional	MP	EPO	Patent application
+ddbj_conventional	MQ	EPO	Patent application
+ddbj_conventional	MR	EPO	Patent application
+ddbj_conventional	MS	EPO	Patent application
+ddbj_conventional	N	GenBank	EST
+ddbj_conventional	O	void	UniProt/Swiss-Prot
+ddbj_conventional	P	void	UniProt/Swiss-Prot
+ddbj_conventional	Q	void	UniProt/Swiss-Prot
+ddbj_conventional	R	GenBank	EST
+ddbj_conventional	S	GenBank	Journal scanning
+ddbj_conventional	T	GenBank	EST
+ddbj_conventional	U	GenBank	
+ddbj_conventional	V	ENA	
+ddbj_conventional	W	GenBank	EST (previously assigned to, but unused by, EMBL)
+ddbj_conventional	X	ENA	
+ddbj_conventional	Y	ENA	
+ddbj_conventional	Z	ENA	
+ddbj_bulk	AAAA-AZZZ	GenBank	general WGS
+ddbj_bulk	BAAA-BZZZ	DDBJ	general WGS
+ddbj_bulk	CAAA-CZZZ	ENA	WGS
+ddbj_bulk	DAAA-DZZZ	GenBank	TPA assemble WGS
+ddbj_bulk	EAAA-EZZZ	DDBJ	TPA assemble WGS
+ddbj_bulk	FAAA-FZZZ	ENA	WGS
+ddbj_bulk	GAAA-GZZZ	GenBank	TSA (Transcriptome Shotgun Assembly)
+ddbj_bulk	HAAA-HZZZ	ENA	TSA (Transcriptome Shotgun Assembly)
+ddbj_bulk	IAAA-IZZZ	DDBJ	TSA (Transcriptome Shotgun Assembly)
+ddbj_bulk	JAAA-JZZZ	GenBank	general WGS
+ddbj_bulk	KAAA-KZZZ	GenBank	TLS (Targeted Locus Study)
+ddbj_bulk	LAAA-LZZZ	GenBank	general WGS
+ddbj_bulk	MAAA-MZZZ	GenBank	general WGS
+ddbj_bulk	NAAA-NZZZ	GenBank	general WGS
+ddbj_bulk	OAAA-OZZZ	ENA	WGS
+ddbj_bulk	PAAA-PZZZ	GenBank	general WGS
+ddbj_bulk	QAAA-QZZZ	GenBank	general WGS
+ddbj_bulk	RAAA-RZZZ	GenBank	general WGS
+ddbj_bulk	SAAA-SZZZ	USPTO	Patent application (pre-grant patent publication)
+ddbj_bulk	TAAA-TZZZ	DDBJ	TLS (Targeted Locus Study)
+protein_id	AAA-AZZ	GenBank	
+protein_id	AAE	USPTO	Patent application
+protein_id	BAA-BZZ	DDBJ	
+protein_id	CAA-CZZ	ENA	
+protein_id	DAA-DZZ	GenBank	TPA
+protein_id	EAA-EZZ	GenBank	WGS
+protein_id	FAA-FZZ	DDBJ	TPA
+protein_id	GAA-GZZ	DDBJ	WGS
+protein_id	HAA-HZZ	GenBank	TPA reassemble WGS
+protein_id	IAA-IZZ	DDBJ	TPA reassemble WGS
+protein_id	JAA-JZZ	GenBank	TSA (Transcriptome Shotgun Assembly)
+protein_id	KAA-KZZ	GenBank	WGS
+protein_id	LAA-LZZ	DDBJ	TSA/TLS
+protein_id	MAA-MZZ	GenBank	WGS/TSA
+protein_id	NAA-NZZ	GenBank	WGS/TSA
+protein_id	OAA-OZZ	GenBank	WGS/TSA
+protein_id	PAA-PZZ	GenBank	WGS/TSA
+protein_id	QAA-QZZ	GenBank	
+protein_id	SAA-SZZ	ENA	
+sra	DRA	DDBJ	Submission object
+sra	DRP	DDBJ	Study object
+sra	DRR	DDBJ	Run object
+sra	DRS	DDBJ	Sample object
+sra	DRX	DDBJ	Experiment object
+sra	DRZ	DDBJ	Analysis object
+sra	ERA	ENA/EBI	Submission object
+sra	ERP	ENA/EBI	Study object
+sra	ERR	ENA/EBI	Run object
+sra	ERS	ENA/EBI	Sample object
+sra	ERX	ENA/EBI	Experiment object
+sra	ERZ	ENA/EBI	Analysis object
+sra	SRA	NCBI	Submission object
+sra	SRP	NCBI	Study object
+sra	SRR	NCBI	Run object
+sra	SRS	NCBI	Sample object
+sra	SRX	NCBI	Experiment object
+sra	SRZ	NCBI	Analysis object
+bioproject	PRJDA-PRJDZ	DDBJ	
+bioproject	PRJEA-PRJEZ	ENA/EBI	
+bioproject	PRJNA-PRJNZ	NCBI	
+biosample	SAMD	DDBJ	
+biosample	SAME	ENA/EBI	
+biosample	SAMN	NCBI	
