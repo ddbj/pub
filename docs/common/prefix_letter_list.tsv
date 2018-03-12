@@ -380,6 +380,6 @@ sra	SRZ	NCBI	Analysis object
 bioproject	PRJDA-PRJDZ	DDBJ	
 bioproject	PRJEA-PRJEZ	ENA/EBI	
 bioproject	PRJNA-PRJNZ	NCBI	
-biosample	SAMD	DDBJ	
-biosample	SAME	ENA/EBI	
-biosample	SAMN	NCBI	
+biosample	SAMD	DDBJ	1
+biosample	SAME	ENA/EBI	2
+biosample	SAMN	NCBI	3
