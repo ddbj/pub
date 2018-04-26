@@ -69,7 +69,7 @@ class BioSampleOwlWriter
         @package_conf = {}
         @version =  version || '1.0.0' #Date.today.to_s
         begin
-            @spreadsheet = Roo::Spreadsheet.open(xlsx.shift)
+            @spreadsheet = Roo::Spreadsheet.open(xlsx)
         rescue
             raise Errno::ENOENT
             []
@@ -239,19 +239,35 @@ end
 \trdfs:subClassOf :DDBJ_Defined_Package ;
 \tdc:identifier \"#{package[:name]}_v#{package[:version]}\" ;
 \trdfs:label \"#{package[:name]} package\"@en ;
-\towl:versioninfo \"#{package[:version]}\" ;
+\towl:versioInfo \"#{package[:version]}\" ;
 "
             package[:attribute_groups].each do |g, v|
                 groupatt_class_name = g.capitalize.gsub('/','-') + "_Group_Attribute"
                 puts "\t:has_attribute\t:#{groupatt_class_name};"
             end
 
+#            package[:attributes].sort_by{ |attr| PackageSortItem.new(attr)}.each_with_index do |v, i|
+#                predicate = v[:type].gsub(' ', '_')
+#                puts "\t:has_#{predicate}\t:#{v[:class_name]};"
+#                #puts "\tdc:identifier \"#{package[:name].downcase}_attribute#{sprintf("%03d", i + 1)}\" ;"
+#            end
+            puts "."
+  
             package[:attributes].sort_by{ |attr| PackageSortItem.new(attr)}.each_with_index do |v, i|
                 predicate = v[:type].gsub(' ', '_')
-                puts "\t:has_#{predicate}\t:#{v[:class_name]};"
-                puts "\tdc:identifier \"#{package[:name].downcase}_attribute#{sprintf("%03d", i + 1)}\" ;"
+                #puts "\t:has_#{predicate}\t:#{v[:class_name]};"
+                #puts "\tdc:identifier \"#{package[:name].downcase}_attribute#{sprintf("%03d", i + 1)}\" ;"
+                puts "
+[]
+    a owl:Axiom ;
+    rdfs:isDefinedBy :#{package_name} ;
+    dc:identifier \"#{package[:name].downcase}_attribute#{sprintf("%03d", i + 1)}\" ;
+    owl:annotatedProperty :has_#{predicate} ;
+    owl:annotatedSource :#{package_name} ;
+    owl:annotatedTarget :#{v[:class_name]} .
+"
             end
-            puts "."
+            #puts "."
             #pp class_name
         end
     end
@@ -308,8 +324,11 @@ end
 #    end
 
 end
-input = ARGV # './ddbj_biosample_definition_table.xlsx'
-owl = BioSampleOwlWriter.new(input)
+input = ARGV.shift # './ddbj_biosample_definition_table.xlsx'
+version = ARGV.shift
+#puts input
+#puts version
+owl = BioSampleOwlWriter.new(input, version)
 owl.to_owl
 #owl.write_package_and_attribute
 #owl.write_attribute_group_each_package
