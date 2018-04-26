@@ -5,13 +5,69 @@ require 'roo'
 require 'pp'
 require 'date'
 
+
+class PackageSortItem
+  #attr_reader :val
+  attr_reader :name
+  attr_reader :type
+  attr_reader :group
+  COMMON_ATTRIBUTES = ['sample_name','sample_title','description','organism','taxonomy_id','bioproject_accession']    
+  ORGANISM_GROUP_ATTRIBUTES = ['strain','isolate','breed','cultivar','ecotype']
+
+  def initialize(val)
+    @name = val[:name]
+    @type = val[:type]
+    @group = val[:group]
+  end
+
+  def priority 
+      if COMMON_ATTRIBUTES.include?(self.name)
+          return 1
+      elsif self.type == 'either_one_mandatory attribute'
+          if self.group == 'Organism'
+            return 2
+          else
+            return 3
+          end
+      elsif self.type == 'mandatory attribute' 
+          return 4
+      elsif self.type == 'optional attribute'
+          if self.name == ORGANISM_GROUP_ATTRIBUTES[0]
+            return 5
+          else
+            return 6
+          end
+      else
+          return 7
+      end
+  end
+
+  def <=>(e)
+      if self.priority == 1 && e.priority == 1
+         return COMMON_ATTRIBUTES.index(self.name) <=> COMMON_ATTRIBUTES.index(e.name)
+      elsif self.priority == 2 && e.priority == 2
+         return ORGANISM_GROUP_ATTRIBUTES.index(self.name) <=> ORGANISM_GROUP_ATTRIBUTES.index(e.name)
+      elsif self.priority == 3 && e.priority == 3
+          if self.group == e.group
+              return self.name <=> e.name
+          else
+              return self.group <=> e.group   
+          end
+      elsif self.priority == e.priority
+          return self.name <=> e.name
+      else
+          return self.priority <=> e.priority
+      end
+  end
+end
+
 class BioSampleOwlWriter
 
     def initialize(xlsx, version = nil)
         @conf =[]
         @att_group = {}
         @package_conf = {}
-        @version =  version || Date.today.to_s
+        @version =  version || '1.0.0' #Date.today.to_s
         begin
             @spreadsheet = Roo::Spreadsheet.open(xlsx.shift)
         rescue
@@ -51,27 +107,37 @@ class BioSampleOwlWriter
             package = @spreadsheet.cell(i,1)
             version = @spreadsheet.cell(i,2)
             @either_one_mandatory = Hash.new { |h,k| h[k] = [] }
+            @group = {} 
             row = @spreadsheet.row(i).map.with_index{|x,j|
                 case x
                 when 'M' then 'mandatory attribute'
                 when 'O' then 'optional attribute'
                 when /E:(.+)/ then
                     @either_one_mandatory[$1] << @package_header[j]
+                    @group[ @package_header[j]] = $1
                     "either_one_mandatory attribute"
                 when '-' then 'attribute'
                 else
                      x
                 end
             }
+            attributes =  @package_header.slice(2,@package_header.count).map.with_index do |attr,index|
+                { :name => attr,
+                  :type => row[index + 2],
+                  :group => @group[attr] || '',
+                  :class_name => att_class_name = attr.capitalize + "_Attribute"
+                 }
+            end
             @package_conf[package] = 
                 {
                 :name => package,
                 :version => version,
-                :attributes => Hash[[@package_header.slice(2,@package_header.count), row.slice(2,@package_header.count)].transpose],
+                :attributes => attributes,
                 :attribute_groups => @either_one_mandatory
             }
         end
     end
+
 
     def to_owl
        write_prefix
@@ -98,8 +164,8 @@ class BioSampleOwlWriter
 
     def write_prefix
         puts "
-@base <http://ddbj.nig.ac.jp/ontologies/biosample/> .
-@prefix : <> .
+@base <http://ddbj.nig.ac.jp/ontologies/biosample> .
+@prefix : <http://ddbj.nig.ac.jp/ontologies/biosample/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -119,6 +185,7 @@ puts '
     rdfs:comment "DDBJ BioSample ontology for semantic representation of the INSDC (DDBJ/ENA/GenBank) biosample records" ;
     rdfs:seeAlso <https://trace.ddbj.nig.ac.jp/biosample/index_e.html> ;
     dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+    owl:versionIRI <http://ddbj.nig.ac.jp/ontologies/biosample/' + @version +'> ;
     owl:versionInfo "version '+ @version + '" .
 
 '
@@ -149,8 +216,8 @@ end
             puts "
 :#{class_name} rdf:type owl:Class ;
     rdfs:subClassOf :Attribute ;
-    rdfs:label \"#{attr['name']} attribute\"@en;
-    dc:identifier \"#{attr['id']}\";
+    rdfs:label \"#{attr['Name']} attribute\"@en;
+    dc:identifier \"#{attr['Harmonized name']}\";
     #{write_line_synonym(attr['Synonym'])}
     rdfs:comment \"#{self.ttl_escaped(attr['Description'])}\"@en;
     rdfs:comment \"#{self.ttl_escaped(attr['DescriptionJa'])}\"@ja;
@@ -170,6 +237,7 @@ end
             puts "
 :#{package_name} rdf:type owl:Class ;
 \trdfs:subClassOf :DDBJ_Defined_Package ;
+\tdc:identifier \"#{package[:name]}_v#{package[:version]}\" ;
 \trdfs:label \"#{package[:name]} package\"@en ;
 \towl:versioninfo \"#{package[:version]}\" ;
 "
@@ -177,17 +245,11 @@ end
                 groupatt_class_name = g.capitalize.gsub('/','-') + "_Group_Attribute"
                 puts "\t:has_attribute\t:#{groupatt_class_name};"
             end
-            package[:attributes].each do |v, k|
-                att_class_name = v.capitalize + "_Attribute"
-                case k
-                when 'mandatory attribuete'
-                when 'optional attribute'
-                when 'either_one_mandatory attribute'
-                when 'attribute'
-                else
-                end
-                predicate = k.gsub(' ', '_')
-                puts "\t:has_#{predicate}\t:#{att_class_name};"
+
+            package[:attributes].sort_by{ |attr| PackageSortItem.new(attr)}.each_with_index do |v, i|
+                predicate = v[:type].gsub(' ', '_')
+                puts "\t:has_#{predicate}\t:#{v[:class_name]};"
+                puts "\tdc:identifier \"#{package[:name].downcase}_attribute#{sprintf("%03d", i + 1)}\" ;"
             end
             puts "."
             #pp class_name
