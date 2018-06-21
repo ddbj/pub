@@ -360,6 +360,7 @@ protein_id	NAA-NZZ	GenBank	WGS/TSA
 protein_id	OAA-OZZ	GenBank	WGS/TSA
 protein_id	PAA-PZZ	GenBank	WGS/TSA
 protein_id	QAA-QZZ	GenBank	
+protein_id	RAA-RZZ	GenBank	WGS
 protein_id	SAA-SZZ	ENA	
 sra	DRA	DDBJ	Submission object
 sra	DRP	DDBJ	Study object
