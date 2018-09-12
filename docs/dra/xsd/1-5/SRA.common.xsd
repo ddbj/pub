@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- INSDC Sequence Read Archive resource Common object XML specification -->
-<!-- version:1.5.7 -->
+<!-- version:1.5.8 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:attributeGroup name="NameGroup">
@@ -581,19 +581,21 @@
       <xs:enumeration value="Illumina Genome Analyzer"/>
       <xs:enumeration value="Illumina Genome Analyzer II"/>
       <xs:enumeration value="Illumina Genome Analyzer IIx"/>
-      <xs:enumeration value="Illumina HiSeq 2500"/>
-      <xs:enumeration value="Illumina HiSeq 2000"/>
-      <xs:enumeration value="Illumina HiSeq 1500"/>
       <xs:enumeration value="Illumina HiSeq 1000"/>
-      <xs:enumeration value="Illumina MiSeq"/>
-      <xs:enumeration value="Illumina HiScanSQ"/>
-      <xs:enumeration value="HiSeq X Ten"/>
-      <xs:enumeration value="NextSeq 500"/>
-      <xs:enumeration value="HiSeq X Five"/>
+      <xs:enumeration value="Illumina HiSeq 1500"/>
+      <xs:enumeration value="Illumina HiSeq 2000"/>
+      <xs:enumeration value="Illumina HiSeq 2500"/>
       <xs:enumeration value="Illumina HiSeq 3000"/>
       <xs:enumeration value="Illumina HiSeq 4000"/>
-      <xs:enumeration value="NextSeq 550"/>
-      <xs:enumeration value="Illumina MiniSeq"/>
+      <xs:enumeration value="HiSeq X Five"/>
+      <xs:enumeration value="HiSeq X Ten"/>
+      <xs:enumeration value="Illumina HiScanSQ"/>
+      <xs:enumeration value="Illumina NovaSeq 6000"/>
+      <xs:enumeration value="Illumina MiSeq"/>
+      <xs:enumeration value="Illumina MiniSeq"/>      
+      <xs:enumeration value="Illumina iSeq 100"/>
+      <xs:enumeration value="NextSeq 500"/>
+      <xs:enumeration value="NextSeq 550"/>            
     </xs:restriction>
   </xs:simpleType>
 
@@ -618,7 +620,6 @@
       <xs:enumeration value="AB SOLiD PI System"/>
       <xs:enumeration value="AB 5500 Genetic Analyzer"/>
       <xs:enumeration value="AB 5500xl Genetic Analyzer"/>
-      <xs:enumeration value="AB 5500xl-W Genetic Analysis System"/>
       <xs:enumeration value="AB 5500xl-W Genetic Analysis System"/>
     </xs:restriction>
   </xs:simpleType>
