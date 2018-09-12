@@ -1,5 +1,15 @@
 # DDBJ Sequence Read Archive (DRA) XML Schema 
 
+## Changes to Common XML 1.5.8 on 12 September 2018  
+
+New schema effective from 12 September 2018: [SRA.common.xsd](https://github.com/ddbj/pub/blob/e478bd21b6626ff3aedff25f7638f1fea87bb9a0/docs/dra/xsd/1-5/SRA.common.xsd)  
+
+### Instrument model changes  
+
+* New instrument model:  
+	* Illumina iSeq 100       
+	* Illumina NovaSeq 6000   
+
 ## Changes to Common XML 1.5.7 on 28 June 2017  
 
 New schema effective from 28 June 2017: [SRA.common.xsd](https://github.com/ddbj/pub/blob/d4720e692c29702f9cfb2a0ef80d49dec414be97/docs/dra/xsd/1-5/SRA.common.xsd)  
