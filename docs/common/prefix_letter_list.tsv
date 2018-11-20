@@ -342,9 +342,12 @@ ddbj_bulk	OAAA-OZZZ	ENA	WGS
 ddbj_bulk	PAAA-PZZZ	GenBank	general WGS
 ddbj_bulk	QAAA-QZZZ	GenBank	general WGS
 ddbj_bulk	RAAA-RZZZ	GenBank	general WGS
-ddbj_bulk	SAAA-SZZZ	USPTO	Patent application (pre-grant patent publication)
+ddbj_bulk	SAAA-SZZZ	GenBank	general WGS
 ddbj_bulk	TAAA-TZZZ	DDBJ	TLS (Targeted Locus Study)
 ddbj_bulk	UAAA-UZZZ	ENA	WGS
+ddbj_bulk	AAAAAA-AZZZZZ	GenBank	general WGS
+ddbj_bulk	BAAAAA-BZZZZZ	DDBJ	general WGS
+ddbj_bulk	CAAAAA-CZZZZZ	ENA	WGS
 protein_id	AAA-AZZ	GenBank	
 protein_id	AAE	USPTO	Patent application
 protein_id	BAA-BZZ	DDBJ	
