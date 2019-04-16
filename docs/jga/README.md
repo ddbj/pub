@@ -1,5 +1,15 @@
 # DDBJ Japanese Genotype-phenotype Archive (JGA) XML Schema 
 
+## Changes to Common XML 1.1.0 on 22 November 2018  
+
+New schema effective from 22 November 2018: [JGA.common.xsd](https://github.com/ddbj/pub/blob/5525a5b5842515411ffb5a62730b2bf223819d8f/docs/jga/xsd/1-1/JGA.common.xsd)  
+
+### Instrument model changes  
+
+* New instrument model:  
+	* Illumina NovaSeq 6000       
+	* Illumina iSeq 100       
+
 ## Changes to Common XML 1.0.9 on 19 July 2017  
 
 New schema effective from 19 July 2017: [JGA.common.xsd](https://github.com/ddbj/pub/blob/b109f64b01a4af4d434aa225c6570fd3f44294b5/docs/jga/xsd/1-0/JGA.common.xsd)  
