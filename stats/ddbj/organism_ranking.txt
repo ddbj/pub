@@ -1,101 +1,101 @@
 Rank	Organism	Nucleotides	Entries
-1	human gut metagenome	470513094930	247421918
-2	Homo sapiens	331449109608	35270191
-3	marine metagenome	158826306021	150126175
-4	Triticum aestivum	87673883154	31299283
-5	metagenome	74849949922	100891358
-6	Mus musculus	55144452784	13650337
-7	Escherichia coli	49635883982	2157747
-8	human metagenome	48660555980	61008751
-9	soil metagenome	45126472923	115785072
-10	Picea glauca	43369240198	12951014
-11	Sus scrofa	40048744232	4920112
-12	Ambystoma mexicanum	33810054443	2526626
-13	gut metagenome	28590602649	34459044
-14	Triticum dicoccoides	27684207216	8120953
+1	human gut metagenome	637924079751	330980384
+2	Homo sapiens	347914936888	36393481
+3	marine metagenome	161160366688	151797628
+4	Triticum aestivum	89317546150	32817381
+5	metagenome	88480560792	110056155
+6	Mus musculus	58139975304	13780627
+7	Escherichia coli	57110106361	2365568
+8	human metagenome	49050573387	61241880
+9	soil metagenome	45148639206	115838249
+10	Picea glauca	43420373252	12988470
+11	Sus scrofa	40049957279	4921153
+12	Ambystoma mexicanum	33810059368	2526629
+13	gut metagenome	30069165991	35244534
+14	Triticum dicoccoides	27867333485	8120278
 15	Pinus lambertiana	27641076351	4289517
-16	Pinus taeda	22367358378	2210403
-17	Pseudomonas aeruginosa	18880995386	548638
-18	Klebsiella pneumoniae	18829274762	606239
-19	Mycobacterium tuberculosis	17924042307	647575
-20	Streptococcus pneumoniae	17251821191	858824
-21	Nicotiana tabacum	17065450599	5139616
-22	Staphylococcus aureus	15283254469	742292
-23	Hordeum vulgare subsp. vulgare	14920559081	16339294
-24	Pseudotsuga menziesii	14838031563	1422991
-25	Bubalus bubalis	14087211761	3767172
-26	Solanum verrucosum	13577294868	2251432
-27	Zea mays subsp. mays	13521345935	627573
-28	Bos taurus	13303426497	3977987
-29	Rattus norvegicus	12452975399	3425438
-30	seawater metagenome	12288388308	8914048
-31	Picea abies	11972390155	11358181
-32	Tursiops truncatus	11692370631	666623
-33	Hordeum vulgare	11261238486	4912532
-34	Callithrix jacchus	10564669346	3002686
-35	Salmonella enterica subsp. enterica serovar Typhi	10504159306	117566
-36	Macaca mulatta	10183982050	1861604
-37	Pan troglodytes	10007047074	776443
-38	Zea mays	9829270980	4552122
-39	Capsicum annuum	9449199187	643045
-40	mouse gut metagenome	9150052880	4178989
-41	Cricetulus griseus	9106036219	981894
-42	sediment metagenome	9099780758	9825247
-43	Macaca fascicularis	8843306226	1430326
-44	Listeria monocytogenes	8608303874	123067
-45	Acinetobacter baumannii	8446980114	395041
-46	Triticum urartu	7986284353	1554573
-47	Danio rerio	7927862434	2407321
-48	Lactuca sativa	7826995427	1323659
-49	Saccharomyces cerevisiae	7663794830	554595
-50	Equus caballus	7634166998	643328
-51	uncultured bacterium	7567611766	18093808
-52	Salmonella enterica	7524004847	418367
-53	groundwater metagenome	7383449096	8077634
-54	Magnaporthe oryzae	7342340525	662541
-55	Ovis aries	7332863664	3354145
-56	human oral metagenome	7192254424	6734447
-57	Canis lupus familiaris	7144309092	2806205
-58	Acinonyx jubatus	7142583316	21123
-59	Rana catesbeiana	7116280265	3679126
-60	Capra hircus	7084602761	1660175
-61	Phascolarctos cinereus	6799863127	798849
-62	Castor canadensis	6713087248	660340
-63	Camelus dromedarius	6567747203	956099
-64	Alligator mississippiensis	6490071205	80375
-65	Pongo abelii	6423419594	473293
-66	Anolis carolinensis	6414882655	8740888
-67	Sarcophilus harrisii	6126424912	896587
-68	Gorilla gorilla gorilla	6074820448	187588
-69	Locusta migratoria	5810447168	1471982
-70	Eschrichtius robustus	5772702658	1270575
-71	marine sediment metagenome	5744298001	3688115
-72	coral metagenome	5729286454	5339080
-73	Hevea brasiliensis	5659108431	2498525
-74	Aedes albopictus	5548990497	3880058
-75	Arachis hypogaea	5486307192	599907
-76	Bos indicus	5480570184	665413
-77	Ixodes scapularis	5382527317	1864063
-78	Nephila clavipes	5362963206	4963232
-79	Oncorhynchus tshawytscha	5359603368	991592
-80	Oryza sativa Indica Group	5355468238	1001566
-81	Bos indicus x Bos taurus	5254321391	6248
-82	Acanthoscurria geniculata	5187236723	12587827
-83	Aegilops tauschii	5160343564	689000
-84	Capra aegagrus	5049767491	473092
-85	Glycine max	5012356715	2290171
-86	Shigella sonnei	4979649166	420517
-87	Bacillus cereus	4977508635	199440
-88	Chinchilla lanigera	4976631225	2489033
-89	Latimeria chalumnae	4958252886	976599
-90	Pisum sativum	4908916611	6171256
-91	Salmo salar	4872829118	2407272
-92	Clostridioides difficile	4870198032	686668
-93	Bos mutus	4815212581	233308
-94	Gavialis gangeticus	4781113611	299273
-95	Heterocephalus glaber	4769611298	396636
-96	Oryctolagus cuniculus	4744727933	2330286
-97	Lycaon pictus	4714947876	1731
-98	Physeter catodon	4704895652	216412
-99	Mustela putorius furo	4700249242	321863
-100	Aedes aegypti	4688751812	1117303
+16	wastewater metagenome	25744569401	20387910
+17	Pinus taeda	22367452779	2210471
+18	Pseudomonas aeruginosa	21677430842	568215
+19	Klebsiella pneumoniae	20985108245	653757
+20	Mycobacterium tuberculosis	17937339477	648343
+21	Streptococcus pneumoniae	17428772632	864128
+22	Nicotiana tabacum	17068364805	5140273
+23	Staphylococcus aureus	15468496233	742962
+24	seawater metagenome	15409848027	10414273
+25	Bubalus bubalis	15084670981	3801192
+26	Hordeum vulgare subsp. vulgare	14920618308	16339310
+27	Pseudotsuga menziesii	14838036308	1422998
+28	Solanum verrucosum	13578694587	2251441
+29	Zea mays subsp. mays	13521398394	627586
+30	Bos taurus	13303923410	3978755
+31	sediment metagenome	12628462341	13588853
+32	Rattus norvegicus	12453218919	3426308
+33	Larix sibirica	12343859894	11327159
+34	Picea abies	11972392537	11358184
+35	Tursiops truncatus	11692414426	666652
+36	Hordeum vulgare	11261503519	4912818
+37	Callithrix jacchus	10564686603	3002698
+38	Salmonella enterica subsp. enterica serovar Typhi	10513651571	117630
+39	Macaca mulatta	10184271559	1861703
+40	Triticum turgidum subsp. durum	10121990897	213627
+41	Pan troglodytes	10022888860	776567
+42	[no name:null]	10007814044	13579976
+43	Zea mays	9829703732	4552342
+44	Canis lupus familiaris	9690484134	3463194
+45	human oral metagenome	9525222986	8451144
+46	Castor canadensis	9474569479	1492488
+47	Capsicum annuum	9450262886	643085
+48	mouse gut metagenome	9150052880	4178989
+49	Cricetulus griseus	9106132095	981957
+50	Macaca fascicularis	8843946434	1430702
+51	Listeria monocytogenes	8640812334	123470
+52	Acinetobacter baumannii	8637370220	396934
+53	Chrysochloris asiatica	8114090605	3819477
+54	Triticum urartu	7986290525	1554577
+55	Danio rerio	7927901681	2407384
+56	Lactuca sativa	7827368089	1323666
+57	Equus caballus	7778058860	712159
+58	Saccharomyces cerevisiae	7701025434	555009
+59	Salmonella enterica	7632804931	419483
+60	uncultured bacterium	7618138021	18212223
+61	Elephantulus edwardii	7604917843	2764226
+62	Pyricularia oryzae	7424801730	666152
+63	groundwater metagenome	7383449096	8077634
+64	Ovis aries	7334173041	3355505
+65	Acinonyx jubatus	7142583316	21123
+66	Rana catesbeiana	7116307125	3679138
+67	Capra hircus	7086403283	1662500
+68	Procavia capensis	6942414380	1370824
+69	Phascolarctos cinereus	6799863127	798849
+70	Ictidomys tridecemlineatus	6750621036	966850
+71	Palaemon carinicauda	6701284346	9473631
+72	eukaryotic synthetic construct	6490460646	99
+73	Alligator mississippiensis	6490073833	80376
+74	Pongo abelii	6432766036	473362
+75	Anolis carolinensis	6414887057	8740890
+76	Sarcophilus harrisii	6126424912	896587
+77	Gorilla gorilla gorilla	6074833455	187601
+78	Nasalis larvatus	6062716263	1243682
+79	Clostridioides difficile	6045031494	749365
+80	Galeopterus variegatus	6028707807	2161831
+81	Locusta migratoria	5810511417	1472020
+82	marine sediment metagenome	5801659128	3748589
+83	Eschrichtius robustus	5772996837	1270905
+84	coral metagenome	5732152866	5349604
+85	Hevea brasiliensis	5659244626	2498633
+86	Aedes albopictus	5549104681	3880155
+87	Arachis hypogaea	5486371629	599977
+88	Bos indicus	5480697815	665735
+89	Ixodes scapularis	5398988143	1875122
+90	Nephila clavipes	5362963206	4963232
+91	Oncorhynchus tshawytscha	5359602589	991591
+92	Oryza sativa Indica Group	5355544044	1001608
+93	Daubentonia madagascariensis	5354490411	3574209
+94	Chaetophractus vellerosus	5335679951	7677418
+95	Bos indicus x Bos taurus	5263493482	5602
+96	Rhinatrema bivittatum	5261906348	83696
+97	Acanthoscurria geniculata	5187236723	12587827
+98	Meriones unguiculatus	5160567101	854730
+99	Aegilops tauschii	5160380368	689013
+100	Hippopotamus amphibius	5104126892	1097234
