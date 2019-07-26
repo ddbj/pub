@@ -1,5 +1,15 @@
 # DDBJ BioSample packages  
 
+## Changes on 25 July 2019   
+
+[ddbj_biosample_definition_table.xlsx]()  
+
+* Package set version: 1.3.0  
+* Changes: Cardinality of attribute is defined in the package-attribute sheet.  
+	* Attributes can be described only once: M (Mandatory), O (Optional), - (Not provided in the pre-defined package)      
+	* Attributes can be described multiple times: M:N (Mandatory), O:N (Optional), -:N (Not provided in the pre-defined package)      
+* New attributes "[component_organism](https://www.ddbj.nig.ac.jp/biosample/attribute.html?all=all#component_organism)" and "[metagenome_source](https://www.ddbj.nig.ac.jp/biosample/attribute.html?all=all#metagenome_source)" added.  
+
 ## Changes on 26 April 2018   
 
 [ddbj_biosample_definition_table.xlsx](https://github.com/ddbj/pub/blob/32ea23bd13a73794cd811f73575bff3a611d27a0/docs/biosample/packages/ddbj_biosample_definition_table.xlsx)  
