@@ -10,9 +10,6 @@ DDBJ Center repository for public files
 
 * Validation rules  
 
-## stats   
-
-* Statistics     
 
 
 
