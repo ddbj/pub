@@ -313,6 +313,7 @@ ddbj_conventional	MP	EPO	Patent application
 ddbj_conventional	MQ	EPO	Patent application
 ddbj_conventional	MR	EPO	Patent application
 ddbj_conventional	MS	EPO	Patent application
+ddbj_conventional	MT	GenBank	Direct submission
 ddbj_conventional	N	GenBank	EST
 ddbj_conventional	O	void	UniProt/Swiss-Prot
 ddbj_conventional	OA	ENA	
@@ -353,6 +354,7 @@ ddbj_bulk	SAAA-SZZZ	GenBank	general WGS
 ddbj_bulk	TAAA-TZZZ	DDBJ	TLS (Targeted Locus Study)
 ddbj_bulk	UAAA-UZZZ	ENA	WGS
 ddbj_bulk	VAAA-VZZZ	GenBank	general WGS
+ddbj_bulk	XAAA-XZZZ	GenBank	general WGS
 ddbj_bulk	WAAA-VZZZ	GenBank	general WGS
 ddbj_bulk	AAAAAA-AZZZZZ	GenBank	general WGS
 ddbj_bulk	BAAAAA-BZZZZZ	DDBJ	general WGS
