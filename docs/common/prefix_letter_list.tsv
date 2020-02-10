@@ -359,7 +359,7 @@ ddbj_bulk	XAAA-XZZZ	GenBank	general WGS
 ddbj_bulk	AAAAAA-AZZZZZ	GenBank	general WGS
 ddbj_bulk	BAAAAA-BZZZZZ	DDBJ	general WGS
 ddbj_bulk	CAAAAA-CZZZZZ	ENA	WGS
-ddbj_bulk	DAAAAA-DZZZZZ	TPA assemble WGS
+ddbj_bulk	DAAAAA-DZZZZZ	GenBank	TPA assemble WGS
 protein_id	AAA-AZZ	GenBank	
 protein_id	AAE	USPTO	Patent application
 protein_id	BAA-BZZ	DDBJ	
