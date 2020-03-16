@@ -322,6 +322,11 @@ ddbj_conventional	OB	ENA
 ddbj_conventional	OC	ENA	
 ddbj_conventional	OD	ENA	
 ddbj_conventional	OE	ENA	
+ddbj_conventional	OF	DDBJ	EST
+ddbj_conventional	OG	DDBJ	EST
+ddbj_conventional	OH	DDBJ	
+ddbj_conventional	OI	DDBJ	
+ddbj_conventional	OJ	DDBJ	
 ddbj_conventional	P	void	UniProt/Swiss-Prot
 ddbj_conventional	Q	void	UniProt/Swiss-Prot
 ddbj_conventional	R	GenBank	EST
