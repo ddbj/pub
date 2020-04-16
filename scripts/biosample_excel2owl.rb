@@ -66,7 +66,7 @@ class BioSampleOwlWriter
     @conf =[]
     @att_group = {}
     @package_conf = {}
-    @version =  version || '1.0.0' #Date.today.to_s
+    @version =  version || Date.today.strftime("%Y%m%d")
     begin
       @spreadsheet = Roo::Spreadsheet.open(xlsx)
     rescue
@@ -81,14 +81,9 @@ class BioSampleOwlWriter
     @header = @spreadsheet.row(1)
   end
 
-  #def parse_package_list
-  #    @packages = @header.slice(10,@header.count)
-  #end
-
   def parse_attribute
     @spreadsheet.default_sheet = 'attribute'
     parse_attribute_header
-    #parse_package_list
     (2..@spreadsheet.last_row).each do |i|
       @conf << Hash[[@header, @spreadsheet.row(i)].transpose]
     end
@@ -112,7 +107,7 @@ class BioSampleOwlWriter
         when 'O' then 'optional attribute'
         when /E:(.+)/ then
           @either_one_mandatory[$1] << @package_header[j]
-          @group[ @package_header[j]] = $1
+          @group[@package_header[j]] = $1
           "either_one_mandatory attribute"
         when '-' then 'attribute'
         else
@@ -120,10 +115,11 @@ class BioSampleOwlWriter
         end
       }
       attributes =  @package_header.slice(2,@package_header.count).map.with_index do |attr,index|
-        { :name => attr,
+        {
+          :name => attr,
           :type => row[index + 2],
           :group => @group[attr] || '',
-          :class_name => att_class_name = attr.capitalize + "_Attribute"
+          :class_name => attr.capitalize + "_Attribute"
         }
       end
       @package_conf[package] =
@@ -136,15 +132,14 @@ class BioSampleOwlWriter
     end
   end
 
-
   def to_owl
-    write_prefix
-    write_annotation
-    write_ddbj_defined_package
+    puts write_prefix
+    puts write_annotation
+    puts write_ddbj_defined_package
     #write_package_class
-    write_attribute_class
-    write_package_and_attribute
-    write_attribute_group_each_package
+    puts write_attribute_class
+    puts write_package_and_attribute
+    puts write_attribute_group_each_package
   end
 
   # seeAlso: http://rdf.greggkellogg.net/yard/RDF/Writer.html#escaped-instance_method
@@ -160,67 +155,76 @@ class BioSampleOwlWriter
   end
 
   def write_prefix
-    puts "
-@base <http://ddbj.nig.ac.jp/ontologies/biosample> .
-@prefix : <http://ddbj.nig.ac.jp/ontologies/biosample/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+    text = <<~"EOS"
+      @base <http://ddbj.nig.ac.jp/ontologies/biosample> .
+      @prefix : <http://ddbj.nig.ac.jp/ontologies/biosample/> .
+      @prefix owl: <http://www.w3.org/2002/07/owl#> .
+      @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+      @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+      @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+      @prefix dc: <http://purl.org/dc/elements/1.1/> .
+      @prefix dcterms: <http://purl.org/dc/terms/> .
+      @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-"
+
+    EOS
+    text
   end
 
   def write_annotation
-puts '
-<>
-    a owl:Ontology ;
-    rdfs:label "DDBJ BioSample ontology" ;
-    rdfs:comment "DDBJ BioSample ontology for semantic representation of the INSDC (DDBJ/ENA/GenBank) biosample records" ;
-    rdfs:seeAlso <https://trace.ddbj.nig.ac.jp/biosample/index_e.html> ;
-    dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
-    owl:versionIRI <http://ddbj.nig.ac.jp/ontologies/biosample/' + @version +'> ;
-    owl:versionInfo "version '+ @version + '" .
+    text = <<~"EOS"
+      <>
+        a owl:Ontology ;
+        rdfs:label "DDBJ BioSample ontology" ;
+        rdfs:comment "DDBJ BioSample ontology for semantic representation of the INSDC (DDBJ/ENA/GenBank) biosample records" ;
+        rdfs:seeAlso <https://trace.ddbj.nig.ac.jp/biosample/index_e.html> ;
+        dcterms:license <http://creativecommons.org/licenses/by/4.0/> ;
+        owl:versionIRI <http://ddbj.nig.ac.jp/ontologies/biosample/#{@version}> ;
+        owl:versionInfo "version #{@version}" .
 
-'
+
+    EOS
+    text
   end
 
   def write_ddbj_defined_package
-    puts "
-:Package rdf:type owl:Class ;
-    rdfs:label \"package\"@en;
-    rdfs:comment \"package class\".
+    text = <<~"EOS"
+      :Package rdf:type owl:Class ;
+        rdfs:label "package"@en;
+        rdfs:comment "package class".
 
-:DDBJ_Defined_Package rdf:type owl:Class ;
-    rdfs:subClassOf :Package ;
-    rdfs:label \"DDBJ defined package\"@en;
-    rdfs:comment \"DDBJ defined package\".
-"
+      :DDBJ_Defined_Package rdf:type owl:Class ;
+        rdfs:subClassOf :Package ;
+        rdfs:label "DDBJ defined package"@en;
+        rdfs:comment "DDBJ defined package".
+
+    EOS
+    text
   end
 
   def write_attribute_class
-    puts "
-:Attribute rdf:type owl:Class ;
-    rdfs:label \"attribute\"@en;
-    rdfs:comment \"attribute class\".
-        "
-    @conf.each do |attr|
-        class_name = attr['Harmonized name'].capitalize + "_Attribute"
-        puts "
-:#{class_name} rdf:type owl:Class ;
-    rdfs:subClassOf :Attribute ;
-    rdfs:label \"#{attr['Name']} attribute\"@en;
-    dc:identifier \"#{attr['Harmonized name']}\";
-    #{write_line_synonym(attr['Synonym'])}
-    rdfs:comment \"#{self.ttl_escaped(attr['Description'])}\"@en;
-    rdfs:comment \"#{self.ttl_escaped(attr['DescriptionJa'])}\"@ja;
-    :format \"#{attr['Format']}\".
-"
+    text = <<~"EOS"
+      :Attribute rdf:type owl:Class ;
+        rdfs:label "attribute"@en;
+        rdfs:comment "attribute class".
 
+
+    EOS
+    @conf.each do |attr|
+      class_name = attr['Harmonized name'].capitalize + "_Attribute"
+      text += <<~"EOS"
+        :#{class_name} rdf:type owl:Class ;
+          rdfs:subClassOf :Attribute ;
+          rdfs:label "#{attr['Name']} attribute"@en;
+          dc:identifier "#{attr['Harmonized name']}";
+          #{write_line_synonym(attr['Synonym'])}
+          rdfs:comment "#{self.ttl_escaped(attr['Description'])}"@en;
+          rdfs:comment "#{self.ttl_escaped(attr['DescriptionJa'])}"@ja;
+          :format "#{attr['Format']}".
+
+      EOS
     end
+    text
   end
 
   def write_line_synonym(synonym)
@@ -228,90 +232,102 @@ puts '
   end
 
   def write_package_and_attribute
+    text = ""
     @package_conf.each do |obj, package|
       package_name = package[:name].gsub('/','-') + "_Package"
-      puts "
-:#{package_name} rdf:type owl:Class ;
-\trdfs:subClassOf :DDBJ_Defined_Package ;
-\tdc:identifier \"#{package[:name]}_v#{package[:version]}\" ;
-\trdfs:label \"#{package[:name]} package\"@en ;
-\towl:versioInfo \"#{package[:version]}\" ;
-"
+      text += <<~"EOS"
+        :#{package_name} rdf:type owl:Class ;
+          rdfs:subClassOf :DDBJ_Defined_Package ;
+          dc:identifier "#{package[:name]}_v#{package[:version]}" ;
+          rdfs:label "#{package[:name]} package"@en ;
+          owl:versioInfo "#{package[:version]}" ;
+      EOS
       package[:attribute_groups].each do |g, v|
         groupatt_class_name = g.capitalize.gsub('/','-') + "_Group_Attribute"
-        puts "\t:has_attribute\t:#{groupatt_class_name};"
+        text += "\t:has_attribute\t:#{groupatt_class_name};\n"
       end
 
-      puts "."
+      text += ".\n\n"
 
       package[:attributes].sort_by{ |attr| PackageSortItem.new(attr)}.each_with_index do |v, i|
         predicate = v[:type].gsub(' ', '_')
-        puts "
-[]
-    a owl:Axiom ;
-    rdfs:isDefinedBy :#{package_name} ;
-    dc:identifier \"#{package[:name].downcase}_attribute#{sprintf("%03d", i + 1)}\" ;
-    owl:annotatedProperty :has_#{predicate} ;
-    owl:annotatedSource :#{package_name} ;
-    owl:annotatedTarget :#{v[:class_name]} .
-"
+        text += <<~"EOS"
+          []
+            a owl:Axiom ;
+            rdfs:isDefinedBy :#{package_name} ;
+            dc:identifier "#{package[:name].downcase}_attribute#{sprintf("%03d", i + 1)}" ;
+            owl:annotatedProperty :has_#{predicate} ;
+            owl:annotatedSource :#{package_name} ;
+            owl:annotatedTarget :#{v[:class_name]} .
+
+          EOS
       end
     end
+    text
   end
 
   def write_attribute_group_each_package
+    text = ""
     @package_conf.each do |obj, package|
       package_name = package[:name].gsub('/','-') + "_Package"
       package[:attribute_groups].each do |g, v|
         groupatt_class_name = g.capitalize.gsub('/','-') + "_Group_Attribute"
-#                puts ":#{groupatt_class_name}\trdfs:subClassOf [
-#                    rdfs:label \"#{g} group attribute on #{package[:name]}\";
-#                    rdf:type owl:Restriction;
-#                    owl:onProperty :has_group_attribute;
-#                    owl:minCadinarity \"1\"^^xsd:nonNegativeInteger;
-#                    owl:allValueFrom owl:oneOf(#{v.map{|a| ':' + a.capitalize + '_Attribute'}.join(', ')});
-#                ]."
+#        text += <<~"EOS"
+#         :#{groupatt_class_name}\trdfs:subClassOf [
+#           rdfs:label "#{g} group attribute on #{package[:name]}";
+#           rdf:type owl:Restriction;
+#           owl:onProperty :has_group_attribute;
+#           owl:minCadinarity "1"^^xsd:nonNegativeInteger;
+#           owl:allValueFrom owl:oneOf(#{v.map{|a| ':' + a.capitalize + '_Attribute'}.join(', ')});
+#         ].
+#        EOS
 
-        puts "
-[]
-    a owl:Axiom ;
-    rdfs:isDefinedBy :Attribute_Group ;
-    owl:annotatedProperty rdfs:subClassOf ;
-    owl:annotatedSource :#{groupatt_class_name} ;
-    owl:annotatedTarget [
-        a owl:Restriction ;
-        owl:domain :#{package_name};
-        rdfs:label \"#{g} group attribute in #{package[:name]}\";
-        owl:minCadinarity \"1\"^^xsd:nonNegativeInteger;
-        owl:onProperty :has_group_attribute;
-        rdfs:range [
-            owl:oneOf ( #{v.map{|a| ':' + a.capitalize + '_Attribute'}.join(' ')} )
-        ];
-    ] .
+        text += <<~"EOS"
+          []
+            a owl:Axiom ;
+            rdfs:isDefinedBy :Attribute_Group ;
+            owl:annotatedProperty rdfs:subClassOf ;
+            owl:annotatedSource :#{groupatt_class_name} ;
+            owl:annotatedTarget [
+              a owl:Restriction ;
+              owl:domain :#{package_name};
+              rdfs:label "#{g} group attribute in #{package[:name]}";
+              owl:minCadinarity "1"^^xsd:nonNegativeInteger;
+              owl:onProperty :has_group_attribute;
+              rdfs:range [
+                owl:oneOf ( #{v.map{|a| ':' + a.capitalize + '_Attribute'}.join(' ')} )
+              ];
+            ] .
 
-"
+        EOS
       end
     end
+    text
   end
 
-#     def write_package_class
-#        @packages.each do |package|
-#            class_name = package.capitalize.gsub('/','-') + "_Package"
-#            puts "
-#:#{class_name} rdf:type owl:Class ;
-#    rdfs:subClassOf :DDBJ_Defined_Package ;
-#    rdfs:label \"#{package} package\"@en ;
-#    rdfs:comment \"#{package} comment\"@en ;
-#    owl:versioninfo \"#{@version}\" .
-#"
-#        end
+#  def write_package_class
+#    text = ""
+#    @packages.each do |package|
+#      class_name = package.capitalize.gsub('/','-') + "_Package"
+#      text += <<~"EOS"
+#        :#{class_name} rdf:type owl:Class ;
+#          rdfs:subClassOf :DDBJ_Defined_Package ;
+#          rdfs:label "#{package} package"@en ;
+#          rdfs:comment "#{package} comment"@en ;
+#          owl:versioninfo "#{@version}" .
+#
+#      EOS
 #    end
+#  end
 
 end
 
+if ARGV.size < 1
+  STDERR.puts "Usage: ruby biosample_excel2owl.rb xlsxファイル [OWLバージョン名]"
+  STDERR.puts "Example: ruby biosample_excel2owl.rb ddbj_biosample_definition_table.xlsx '1.2.0'"
+  exit(1)
+end
 input = ARGV.shift # './ddbj_biosample_definition_table.xlsx'
 version = ARGV.shift
 owl = BioSampleOwlWriter.new(input, version)
 owl.to_owl
-#owl.write_package_and_attribute
-#owl.write_attribute_group_each_package
