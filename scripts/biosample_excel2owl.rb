@@ -101,23 +101,35 @@ class BioSampleOwlWriter
       version = @spreadsheet.cell(i,2)
       @either_one_mandatory = Hash.new { |h,k| h[k] = [] }
       @group = {}
-      row = @spreadsheet.row(i).map.with_index{|x,j|
-        case x
-        when 'M' then 'mandatory attribute'
-        when 'O' then 'optional attribute'
-        when /E:(.+)/ then
+      attr_type = []
+      multiple = []
+      @spreadsheet.row(i).map.with_index{|v,j|
+        if v.start_with?("M")
+          attr_type.push("mandatory attribute")
+        elsif v.start_with?("O")
+          attr_type.push("optional attribute")
+        elsif v =~ /E:(.+)/
           @either_one_mandatory[$1] << @package_header[j]
           @group[@package_header[j]] = $1
-          "either_one_mandatory attribute"
-        when '-' then 'attribute'
+          attr_type.push("either_one_mandatory attribute")
+        elsif v.start_with?("-")
+          attr_type.push("attribute")
         else
-          x
+          attr_type.push(v)
+        end
+
+        # multiple flag
+        if v.end_with?(":N")
+          multiple.push(true)
+        else
+          multiple.push(false)
         end
       }
       attributes =  @package_header.slice(2,@package_header.count).map.with_index do |attr,index|
         {
           :name => attr,
-          :type => row[index + 2],
+          :type => attr_type[index + 2],
+          :multiple => multiple[index + 2],
           :group => @group[attr] || '',
           :class_name => attr.capitalize + "_Attribute"
         }
@@ -235,7 +247,7 @@ class BioSampleOwlWriter
     text = ""
     @package_conf.each do |obj, package|
       package_name = package[:name].gsub('/','-') + "_Package"
-      text += <<~"EOS"
+      text << <<~"EOS"
         :#{package_name} rdf:type owl:Class ;
           rdfs:subClassOf :DDBJ_Defined_Package ;
           dc:identifier "#{package[:name]}_v#{package[:version]}" ;
@@ -244,23 +256,30 @@ class BioSampleOwlWriter
       EOS
       package[:attribute_groups].each do |g, v|
         groupatt_class_name = g.capitalize.gsub('/','-') + "_Group_Attribute"
-        text += "\t:has_attribute\t:#{groupatt_class_name};\n"
+        text << "\t:has_attribute\t:#{groupatt_class_name};\n"
       end
 
-      text += ".\n\n"
+      text << ".\n\n"
 
       package[:attributes].sort_by{ |attr| PackageSortItem.new(attr)}.each_with_index do |v, i|
         predicate = v[:type].gsub(' ', '_')
-        text += <<~"EOS"
+        max_cardinality_num = v[:type].start_with?("mandatory") ? 1 : 0
+        max_cardinality_triple = v[:multiple] ? "" : "owl:maxCardinality \"1\"^^xsd:nonNegativeInteger ;"
+        text << <<~"EOS"
           []
             a owl:Axiom ;
             rdfs:isDefinedBy :#{package_name} ;
             dc:identifier "#{package[:name].downcase}_attribute#{sprintf("%03d", i + 1)}" ;
-            owl:annotatedProperty :has_#{predicate} ;
+            owl:annotatedProperty [
+              a owl:Restriction ;
+              owl:onProperty :has_#{predicate} ;
+              owl:minCardinality "#{max_cardinality_num}"^^xsd:nonNegativeInteger ;
+              #{max_cardinality_triple}
+            ] ;
             owl:annotatedSource :#{package_name} ;
             owl:annotatedTarget :#{v[:class_name]} .
 
-          EOS
+        EOS
       end
     end
     text
@@ -277,7 +296,7 @@ class BioSampleOwlWriter
 #           rdfs:label "#{g} group attribute on #{package[:name]}";
 #           rdf:type owl:Restriction;
 #           owl:onProperty :has_group_attribute;
-#           owl:minCadinarity "1"^^xsd:nonNegativeInteger;
+#           owl:minCardinality "1"^^xsd:nonNegativeInteger;
 #           owl:allValueFrom owl:oneOf(#{v.map{|a| ':' + a.capitalize + '_Attribute'}.join(', ')});
 #         ].
 #        EOS
@@ -292,7 +311,7 @@ class BioSampleOwlWriter
               a owl:Restriction ;
               owl:domain :#{package_name};
               rdfs:label "#{g} group attribute in #{package[:name]}";
-              owl:minCadinarity "1"^^xsd:nonNegativeInteger;
+              owl:minCardinality "1"^^xsd:nonNegativeInteger;
               owl:onProperty :has_group_attribute;
               rdfs:range [
                 owl:oneOf ( #{v.map{|a| ':' + a.capitalize + '_Attribute'}.join(' ')} )
