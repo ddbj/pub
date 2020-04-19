@@ -10,7 +10,7 @@ class PackageSortItem
   attr_reader :name
   attr_reader :type
   attr_reader :group
-  COMMON_ATTRIBUTES = ['sample_name','sample_title','description','organism','taxonomy_id','bioproject_accession']
+  COMMON_ATTRIBUTES = ['sample_name','sample_title','description','organism','taxonomy_id','bioproject_id', 'locus_tag_prefix']
   ORGANISM_GROUP_ATTRIBUTES = ['strain','isolate','breed','cultivar','ecotype']
 
   def initialize(val)
