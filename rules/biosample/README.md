@@ -1,10 +1,10 @@
 # BioSample validation rules  
 
-## rule list  
+## Rules   
 
 * [Validation rules](https://docs.google.com/spreadsheets/d/1f5YpGvznU7_Smt3Ayv9MdDnGlOIwP5jRxwindXQ18Oc/edit#gid=0)  
 
-## BioSample validation rules v1.0.10 (10 June 2020)  
+## v1.0.10 (10 June 2020)  
 
 ### Added  
 
