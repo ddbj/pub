@@ -2,7 +2,7 @@
 
 ## Rules   
 
-* [Validation rules](https://docs.google.com/spreadsheets/d/1f5YpGvznU7_Smt3Ayv9MdDnGlOIwP5jRxwindXQ18Oc/edit#gid=0)  
+* [Validation rules](https://docs.google.com/spreadsheets/d/1kh9vRllab7t7PBftd0nEBi-YbIWvFVRAiYS6F6RRBNU)  
 
 ## v1.0.10 (10 June 2020)  
 
