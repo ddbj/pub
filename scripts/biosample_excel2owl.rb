@@ -63,7 +63,7 @@ end
 class BioSampleOwlWriter
 
   def initialize(xlsx, version = nil)
-    @conf =[]
+    @attribute_def =[]
     @att_group = {}
     @package_conf = {}
     @version =  version || Date.today.strftime("%Y%m%d")
@@ -74,7 +74,9 @@ class BioSampleOwlWriter
       []
     end
     parse_attribute
+    parse_package_group
     parse_package
+    parse_package_attribute
   end
 
   def parse_attribute_header
@@ -85,17 +87,72 @@ class BioSampleOwlWriter
     @spreadsheet.default_sheet = 'attribute'
     parse_attribute_header
     (2..@spreadsheet.last_row).each do |i|
-      @conf << Hash[[@header, @spreadsheet.row(i)].transpose]
+      @attribute_def << Hash[[@header, @spreadsheet.row(i)].transpose]
+    end
+  end
+
+  def parse_package_group_header
+    @package_group_header = @spreadsheet.row(1)
+  end
+
+  def parse_package_group
+    @spreadsheet.default_sheet = 'package-group'
+    header = parse_package_group_header
+    @package_group_def = {}
+    (2..@spreadsheet.last_row).each_with_index do |i, idx|
+      package_group = @spreadsheet.cell(i, header.find_index("Package group name") + 1)
+      display_name = @spreadsheet.cell(i, header.find_index("DisplayName") + 1)
+      description = @spreadsheet.cell(i, header.find_index("Description") + 1)
+      group = @spreadsheet.cell(i, header.find_index("Group") + 1)
+      @package_group_def[package_group] =
+      {
+        :name => package_group,
+        :display_name => display_name,
+        :description => description,
+        :group => group,
+        :order => idx + 1
+      }
     end
   end
 
   def parse_package_header
     @package_header = @spreadsheet.row(1)
   end
-
   def parse_package
+    @spreadsheet.default_sheet = 'package'
+    header = parse_package_header
+    @package_def = {}
+    (2..@spreadsheet.last_row).each_with_index do |i, idx|
+      package = @spreadsheet.cell(i, header.find_index("Package name") + 1)
+      version = @spreadsheet.cell(i, header.find_index("Version") + 1)
+      display_name = @spreadsheet.cell(i, header.find_index("DisplayName") + 1)
+      short_name = @spreadsheet.cell(i, header.find_index("ShortName") + 1)
+      env_package = @spreadsheet.cell(i, header.find_index("EnvPackage") + 1)
+      description = @spreadsheet.cell(i, header.find_index("Description") + 1)
+      example = @spreadsheet.cell(i, header.find_index("Example") + 1)
+      group = @spreadsheet.cell(i, header.find_index("Group") + 1)
+      @package_def[package] =
+      {
+        :name => package,
+        :version => version,
+        :display_name => display_name,
+        :short_name => short_name,
+        :env_package => env_package,
+        :description => description,
+        :example => example,
+        :group => group,
+        :order => idx + 1
+      }
+    end
+  end
+
+  def parse_package_attribute_header
+    @package_attribute_header = @spreadsheet.row(1)
+  end
+
+  def parse_package_attribute
     @spreadsheet.default_sheet = 'package-attribute'
-    parse_package_header
+    parse_package_attribute_header
     (2..@spreadsheet.last_row).each do |i|
       package = @spreadsheet.cell(i,1)
       version = @spreadsheet.cell(i,2)
@@ -109,8 +166,8 @@ class BioSampleOwlWriter
         elsif v.start_with?("O")
           attr_type.push("optional attribute")
         elsif v =~ /E:(.+)/
-          @either_one_mandatory[$1] << @package_header[j]
-          @group[@package_header[j]] = $1
+          @either_one_mandatory[$1] << @package_attribute_header[j]
+          @group[@package_attribute_header[j]] = $1
           attr_type.push("either_one_mandatory attribute")
         elsif v.start_with?("-")
           attr_type.push("attribute")
@@ -125,7 +182,7 @@ class BioSampleOwlWriter
           multiple.push(false)
         end
       }
-      attributes =  @package_header.slice(2,@package_header.count).map.with_index do |attr,index|
+      attributes =  @package_attribute_header.slice(2,@package_attribute_header.count).map.with_index do |attr,index|
         {
           :name => attr,
           :type => attr_type[index + 2],
@@ -147,8 +204,8 @@ class BioSampleOwlWriter
   def to_owl
     puts write_prefix
     puts write_annotation
-    puts write_ddbj_defined_package
-    #write_package_class
+    puts write_package_group_class
+    puts write_package_class
     puts write_attribute_class
     puts write_package_and_attribute
     puts write_attribute_group_each_package
@@ -177,6 +234,7 @@ class BioSampleOwlWriter
       @prefix dc: <http://purl.org/dc/elements/1.1/> .
       @prefix dcterms: <http://purl.org/dc/terms/> .
       @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+      @prefix sio: <http://semanticscience.org/resource/> .
 
 
     EOS
@@ -199,7 +257,35 @@ class BioSampleOwlWriter
     text
   end
 
-  def write_ddbj_defined_package
+  def write_package_group_class
+    text = <<~"EOS"
+      :PackageGroup rdf:type owl:Class ;
+        rdfs:label "package group"@en;
+        rdfs:comment "package group class".
+
+    EOS
+
+    @package_group_def.each do |name, package_group|
+      class_name = package_group[:name].gsub('/','-') + "_PackageGroup"
+      sub_package_text = ""
+      unless package_group[:group].nil? || package_group[:group] == ""
+        sub_package_text = "sio:SIO_000095 :#{package_group[:group].gsub('/','-')}_PackageGroup ;"
+      end
+      text += <<~"EOS"
+        :#{class_name} rdf:type owl:Class ;
+          rdfs:subClassOf :PackageGroup ;
+          #{sub_package_text}
+          rdfs:label "#{self.ttl_escaped(package_group[:display_name])}"@en;
+          dc:identifier "#{package_group[:name]}";
+          dcterms:description "#{self.ttl_escaped(package_group[:description])}"@en;
+          :display_order #{package_group[:order]} .
+
+      EOS
+    end
+    text
+  end
+
+  def write_package_class
     text = <<~"EOS"
       :Package rdf:type owl:Class ;
         rdfs:label "package"@en;
@@ -211,6 +297,26 @@ class BioSampleOwlWriter
         rdfs:comment "DDBJ defined package".
 
     EOS
+    @package_def.each do |name, package|
+      package_name = package[:name].gsub('/','-').gsub(' ','-') + "_Package"
+      sub_package_text = ""
+      unless package[:group].nil? || package[:group] == ""
+        sub_package_text = "sio:SIO_000095 :#{package[:group].gsub('/','-').gsub(' ','-')}_PackageGroup ;"
+      end
+      text << <<~"EOS"
+        :#{package_name} rdf:type owl:Class ;
+          rdfs:subClassOf :DDBJ_Defined_Package ;
+          #{sub_package_text}
+          dc:identifier "#{package[:name]}" ;
+          rdfs:label "#{package[:display_name]}"@en ;
+          skos:altLabel "#{package[:short_name]}"@en ;
+          :envPackage "#{package[:env_package]}"@en ;
+          dcterms:description "#{self.ttl_escaped(package[:description])}"@en ;
+          owl:versioInfo "#{package[:version]}" ;
+          :display_order #{package[:order]} .
+
+      EOS
+    end
     text
   end
 
@@ -222,7 +328,7 @@ class BioSampleOwlWriter
 
 
     EOS
-    @conf.each do |attr|
+    @attribute_def.each do |attr|
       class_name = attr['Harmonized name'].capitalize + "_Attribute"
       text += <<~"EOS"
         :#{class_name} rdf:type owl:Class ;
@@ -246,21 +352,8 @@ class BioSampleOwlWriter
   def write_package_and_attribute
     text = ""
     @package_conf.each do |obj, package|
-      package_name = package[:name].gsub('/','-') + "_Package"
-      text << <<~"EOS"
-        :#{package_name} rdf:type owl:Class ;
-          rdfs:subClassOf :DDBJ_Defined_Package ;
-          dc:identifier "#{package[:name]}_v#{package[:version]}" ;
-          rdfs:label "#{package[:name]} package"@en ;
-          owl:versioInfo "#{package[:version]}" ;
-      EOS
-      package[:attribute_groups].each do |g, v|
-        groupatt_class_name = g.capitalize.gsub('/','-') + "_Group_Attribute"
-        text << "\t:has_attribute\t:#{groupatt_class_name};\n"
-      end
-
-      text << ".\n\n"
-
+      text << "\n\n"
+      package_name = package[:name].gsub('/','-').gsub(' ','-') + "_Package"
       package[:attributes].sort_by{ |attr| PackageSortItem.new(attr)}.each_with_index do |v, i|
         predicate = v[:type].gsub(' ', '_')
         max_cardinality_num = v[:type].start_with?("mandatory") ? 1 : 0
@@ -290,16 +383,7 @@ class BioSampleOwlWriter
     @package_conf.each do |obj, package|
       package_name = package[:name].gsub('/','-') + "_Package"
       package[:attribute_groups].each do |g, v|
-        groupatt_class_name = g.capitalize.gsub('/','-') + "_Group_Attribute"
-#        text += <<~"EOS"
-#         :#{groupatt_class_name}\trdfs:subClassOf [
-#           rdfs:label "#{g} group attribute on #{package[:name]}";
-#           rdf:type owl:Restriction;
-#           owl:onProperty :has_group_attribute;
-#           owl:minCardinality "1"^^xsd:nonNegativeInteger;
-#           owl:allValueFrom owl:oneOf(#{v.map{|a| ':' + a.capitalize + '_Attribute'}.join(', ')});
-#         ].
-#        EOS
+        groupatt_class_name = g.gsub('/','-') + "_Group_Attribute"
 
         text += <<~"EOS"
           []
@@ -323,21 +407,6 @@ class BioSampleOwlWriter
     end
     text
   end
-
-#  def write_package_class
-#    text = ""
-#    @packages.each do |package|
-#      class_name = package.capitalize.gsub('/','-') + "_Package"
-#      text += <<~"EOS"
-#        :#{class_name} rdf:type owl:Class ;
-#          rdfs:subClassOf :DDBJ_Defined_Package ;
-#          rdfs:label "#{package} package"@en ;
-#          rdfs:comment "#{package} comment"@en ;
-#          owl:versioninfo "#{@version}" .
-#
-#      EOS
-#    end
-#  end
 
 end
 
