@@ -324,7 +324,7 @@ ddbj_conventional	OB	ENA
 ddbj_conventional	OC	ENA	
 ddbj_conventional	OD	ENA	
 ddbj_conventional	OE	ENA	
-ddbj_conventional	OF	DDBJ	
+ddbj_conventional	OF	KIPO	Patent application
 ddbj_conventional	OG	DDBJ	
 ddbj_conventional	OH	DDBJ	
 ddbj_conventional	OI	DDBJ	
@@ -364,6 +364,8 @@ ddbj_bulk	UAAA-UZZZ	ENA	WGS
 ddbj_bulk	VAAA-VZZZ	GenBank	general WGS
 ddbj_bulk	WAAA-WZZZ	GenBank	general WGS
 ddbj_bulk	XAAA-XZZZ	GenBank	general WGS
+ddbj_bulk	YAAA-YZZZ	DDBJ	TPA-TSA
+ddbj_bulk	ZAAA-ZZZZ	DDBJ	TPA-TLS
 ddbj_bulk	AAAAAA-AZZZZZ	GenBank	general WGS
 ddbj_bulk	BAAAAA-BZZZZZ	DDBJ	general WGS
 ddbj_bulk	CAAAAA-CZZZZZ	ENA	WGS
@@ -378,7 +380,7 @@ protein_id	EAA-EZZ	GenBank	WGS
 protein_id	FAA-FZZ	DDBJ	TPA
 protein_id	GAA-GZZ	DDBJ	WGS
 protein_id	HAA-HZZ	GenBank	TPA reassemble WGS
-protein_id	IAA-IZZ	DDBJ	TPA reassemble WGS
+protein_id	IAA-IZZ	DDBJ	TPA reassemble WGS/TSA/TLS
 protein_id	JAA-JZZ	GenBank	TSA (Transcriptome Shotgun Assembly)
 protein_id	KAA-KZZ	GenBank	WGS
 protein_id	LAA-LZZ	DDBJ	TSA/TLS
