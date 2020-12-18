@@ -317,6 +317,7 @@ ddbj_conventional	MT	GenBank	Direct submission
 ddbj_conventional	MU	GenBank	scaffold/CON
 ddbj_conventional	MV	USPTO	Patent application
 ddbj_conventional	MW	GenBank	Direct submission
+ddbj_conventional	MX	USPTO	Patent application
 ddbj_conventional	N	GenBank	EST
 ddbj_conventional	O	void	UniProt/Swiss-Prot
 ddbj_conventional	OA	ENA	
