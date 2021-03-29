@@ -3,7 +3,7 @@
 from xml.etree import ElementTree
 import csv
 
-file = "input_xml_for_wikibase/institution_master_kakenhi.xml"
+file = "institution_master_kakenhi.xml"
 
 tree = ElementTree.parse(file)
 root = tree.getroot()
@@ -36,5 +36,3 @@ for institution_table in root.iter("institution_table"):
 		
 			tsv_writer = csv.writer(f_tsv, delimiter=",")
 			tsv_writer.writerows([institution_list])
-
-#		print(section1_list, section2_list, section3_list)
