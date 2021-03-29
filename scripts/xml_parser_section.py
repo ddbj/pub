@@ -3,7 +3,7 @@
 from xml.etree import ElementTree
 import csv
 
-file = "input_xml_for_wikibase/review_section_master_kakenhi.xml"
+file = "review_section_master_kakenhi.xml"
 
 tree = ElementTree.parse(file)
 root = tree.getroot()
@@ -23,7 +23,6 @@ for review_section_table in root.iter("review_section_table"):
 			section1_list.append(code.text)	
 		for name in review_section1.findall("name"):
 			section1_list.append(name.text)
-#		print("1:", section1_list)
 
 		for review_section2 in review_section1.findall('review_section'):
 			section2_list = []
@@ -31,7 +30,6 @@ for review_section_table in root.iter("review_section_table"):
 				section2_list.append(code.text)	
 			for name in review_section2.findall("name"):
 				section2_list.append(name.text)
-#			print("2:", section2_list)
 
 			for review_section3 in review_section2.findall('review_section'):
 				section3_list = []
@@ -39,7 +37,6 @@ for review_section_table in root.iter("review_section_table"):
 					section3_list.append(code.text)	
 				for name in review_section3.findall("name"):
 					section3_list.append(name.text)
-#				print("3:", section3_list)
 				
 				tsv_writer = csv.writer(f_tsv, delimiter=",")
 				tsv_writer.writerows([section1_list + section2_list + section3_list])
