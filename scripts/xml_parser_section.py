@@ -41,7 +41,7 @@ for review_section_table in root.iter("review_section_table"):
 				tsv_writer = csv.writer(f_tsv, delimiter=",")
 				tsv_writer.writerows([section1_list + section2_list + section3_list])
 
-				print(section1_list, section2_list, section3_list)
+#				print(section1_list, section2_list, section3_list)
 	
 
 
