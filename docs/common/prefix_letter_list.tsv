@@ -330,8 +330,8 @@ ddbj_conventional	OE	ENA
 ddbj_conventional	OF	KIPO	Patent application
 ddbj_conventional	OG	JPO	Patent application
 ddbj_conventional	OH	DDBJ	EST
-ddbj_conventional	OI	DDBJ	
-ddbj_conventional	OJ	DDBJ	
+ddbj_conventional	OI	JPO	Patent application
+ddbj_conventional	OJ	JPO	Patent application
 ddbj_conventional	OU	ENA	
 ddbj_conventional	OV	ENA	
 ddbj_conventional	OW	ENA	
@@ -339,6 +339,11 @@ ddbj_conventional	OX	ENA
 ddbj_conventional	OY	ENA	
 ddbj_conventional	OZ	ENA	
 ddbj_conventional	P	void	UniProt/Swiss-Prot
+ddbj_conventional	PA	JPO	Patent application
+ddbj_conventional	PB	DDBJ	
+ddbj_conventional	PC	DDBJ	
+ddbj_conventional	PD	DDBJ	
+ddbj_conventional	PE	DDBJ	
 ddbj_conventional	Q	void	UniProt/Swiss-Prot
 ddbj_conventional	R	GenBank	EST
 ddbj_conventional	S	GenBank	Journal scanning
