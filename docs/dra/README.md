@@ -1,5 +1,29 @@
 # DDBJ Sequence Read Archive (DRA) XML Schema 
 
+## Planned changes to Common XML 1.5.9  
+
+### Instrument model changes  
+
+* New instrument model:  
+	* NextSeq 1000
+	* NextSeq 2000
+	* BGISEQ-500
+	* DNBSEQ-G400
+	* DNBSEQ-T7
+	* DNBSEQ-G50
+	* MGISEQ-2000RS
+	* Sequel II
+	* Ion GeneStudio S5
+	* Ion GeneStudio S5 plus
+	* Ion GeneStudio S5 prime
+
+## Planned changes to Experiment XML 1.5.9  
+
+### Library strategy changes  
+
+* New library strategies:  
+	* NOMe-Seq 
+
 ## Changes to Common XML 1.5.8 on 12 September 2018  
 
 New schema effective from 12 September 2018: [SRA.common.xsd](https://github.com/ddbj/pub/blob/e478bd21b6626ff3aedff25f7638f1fea87bb9a0/docs/dra/xsd/1-5/SRA.common.xsd)  
