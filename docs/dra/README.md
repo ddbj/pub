@@ -1,6 +1,6 @@
 # DDBJ Sequence Read Archive (DRA) XML Schema 
 
-## Planned changes to Common XML 1.5.9  
+## Changes to Common XML 1.5.9 on 7 July 2021  
 
 ### Instrument model changes  
 
@@ -17,7 +17,7 @@
 	* Ion GeneStudio S5 plus
 	* Ion GeneStudio S5 prime
 
-## Planned changes to Experiment XML 1.5.9  
+## Changes to Experiment XML 1.5.9 on 7 July 2021  
 
 ### Library strategy changes  
 
