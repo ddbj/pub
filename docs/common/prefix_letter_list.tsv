@@ -343,9 +343,9 @@ ddbj_conventional	OY	ENA
 ddbj_conventional	OZ	ENA	
 ddbj_conventional	P	void	UniProt/Swiss-Prot
 ddbj_conventional	PA	JPO	Patent application
-ddbj_conventional	PB	DDBJ	
-ddbj_conventional	PC	DDBJ	
-ddbj_conventional	PD	DDBJ	
+ddbj_conventional	PB	JPO	Patent application
+ddbj_conventional	PC	JPO	Patent application
+ddbj_conventional	PD	JPO	Patent application
 ddbj_conventional	PE	DDBJ	
 ddbj_conventional	Q	void	UniProt/Swiss-Prot
 ddbj_conventional	R	GenBank	EST
