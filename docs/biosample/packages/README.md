@@ -2,6 +2,8 @@
 
 ## Changes on 15 December 2021   
 
+[ddbj_biosample_definition_table.xlsx](https://github.com/ddbj/pub/blob/master/docs/biosample/packages/ddbj_biosample_definition_table.xlsx)  
+
 * Package set version: 1.3.1  
 * Changes: Strain is required in the MIGS.ba packages.  
 
