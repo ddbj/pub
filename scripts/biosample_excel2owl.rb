@@ -412,7 +412,7 @@ end
 
 if ARGV.size < 1
   STDERR.puts "Usage: ruby biosample_excel2owl.rb xlsxファイル [OWLバージョン名]"
-  STDERR.puts "Example: ruby biosample_excel2owl.rb ddbj_biosample_definition_table.xlsx '1.2.0'"
+  STDERR.puts "Example: bundle exec ruby biosample_excel2owl.rb ../docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.4.0.xlsx '1.4.0' > ../docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.4.0.ttl"
   exit(1)
 end
 input = ARGV.shift # './ddbj_biosample_definition_table.xlsx'
