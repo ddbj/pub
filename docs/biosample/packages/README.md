@@ -1,12 +1,42 @@
 # DDBJ BioSample packages  
 
+## Changes on 24 February 2022   
+
+[ddbj_biosample_definition_table.xlsx](https://github.com/ddbj/pub/blob/102974f3abc1e95389ed1272404e01d43e2435a7/docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.4.0.xlsx)  
+
+* Package set version: 1.4.0  
+* New packages added. 
+	* Standard packages used for samples when it is not appropriate or advantageous to use MIxS or pathogen packages.
+		* SARS-CoV-2.cl, version 1.0
+		* SARS-CoV-2.wwsurv, version 1.0
+		* Microbe, version 1.0
+		* Model.organism.animal, version 1.0
+		* Metagenome.environmental, version 1.0
+		* Invertebrate, version 1.0
+		* Human, version 1.0
+		* Plant, version 1.0
+		* Virus, version 1.0
+		* Beta-lactamase, version 1.0
+	* Pathogen packages used for pathogen samples that are relevant to public health.
+		* Pathogen.cl, version 1.0
+		* Pathogen.env, version 1.0
+	* MIxS packages.
+		* MIMAG: metagenome-assembled genome, version 5.0
+		* MISAG: single amplified genome, version 5.0
+		* MIUVIG: uncultivated virus genome, version 5.0
+	* MIxS environmental packages.
+		* built 
+* Package changes.  
+	* Functional genomics package renamed to Omics package.
+* Definition added.
+	* "Either one attribute is mandatory" is defined in the package-attribute sheet. For example, strain or isolate is required for the Microbe package organism attribute group (E:Organism).  
+
 ## Changes on 15 December 2021   
 
 [ddbj_biosample_definition_table.xlsx](https://github.com/ddbj/pub/blob/6e040b48efa18d87d78ba11c5516f027a0253ab2/docs/biosample/packages/ddbj_biosample_definition_table.xlsx)
 
 * Package set version: 1.2.1  
 * Changes: Strain is required in the MIGS.ba packages.  
-
 ## Changes on 25 July 2019   
 
 This version is obsolete.
