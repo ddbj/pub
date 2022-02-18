@@ -2,7 +2,7 @@
 
 ## Changes on 24 February 2022   
 
-[ddbj_biosample_definition_table.xlsx](https://github.com/ddbj/pub/blob/102974f3abc1e95389ed1272404e01d43e2435a7/docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.4.0.xlsx)  
+[ddbj_biosample_definition_table.xlsx](https://github.com/ddbj/pub/blob/d43cc5410d8224fccc09ef2bb287d58249251480/docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.4.0.xlsx)  
 
 * Package set version: 1.4.0  
 * New packages added. 
