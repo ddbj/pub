@@ -348,6 +348,16 @@ ddbj_conventional	PB	JPO	Patent application
 ddbj_conventional	PC	JPO	Patent application
 ddbj_conventional	PD	JPO	Patent application
 ddbj_conventional	PE	DDBJ	
+ddbj_conventional	PF	DDBJ	
+ddbj_conventional	PG	DDBJ	
+ddbj_conventional	PH	DDBJ	
+ddbj_conventional	PI	DDBJ	
+ddbj_conventional	PJ	DDBJ	
+ddbj_conventional	PK	DDBJ	
+ddbj_conventional	PL	DDBJ	
+ddbj_conventional	PM	DDBJ	
+ddbj_conventional	PN	DDBJ	
+ddbj_conventional	POL	DDBJ	
 ddbj_conventional	Q	void	UniProt/Swiss-Prot
 ddbj_conventional	R	GenBank	EST
 ddbj_conventional	S	GenBank	Journal scanning
