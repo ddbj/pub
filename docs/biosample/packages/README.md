@@ -31,6 +31,14 @@
 * Definition added.
 	* "Either one attribute is mandatory" is defined in the package-attribute sheet. For example, strain or isolate is required for the Microbe package organism attribute group (E:Organism).  
 
+### Attribute name change {#name-change}
+
+In the MIxS package, following attribute names are changed.  
+
+* env_biome → env_broad_scale  
+* env_feature → env_local_scale  
+* env_material → env_medium  
+
 ## Changes on 15 December 2021   
 
 [ddbj_biosample_definition_table.xlsx](https://github.com/ddbj/pub/blob/6e040b48efa18d87d78ba11c5516f027a0253ab2/docs/biosample/packages/ddbj_biosample_definition_table.xlsx)
