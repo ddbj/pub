@@ -31,7 +31,7 @@
 * Definition added.
 	* "Either one attribute is mandatory" is defined in the package-attribute sheet. For example, strain or isolate is required for the Microbe package organism attribute group (E:Organism).  
 
-### Attribute name change {#name-change}
+### Attribute name change
 
 In the MIxS package, following attribute names are changed.  
 
