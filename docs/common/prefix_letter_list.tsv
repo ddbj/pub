@@ -357,7 +357,7 @@ ddbj_conventional	PK	DDBJ
 ddbj_conventional	PL	DDBJ	
 ddbj_conventional	PM	DDBJ	
 ddbj_conventional	PN	DDBJ	
-ddbj_conventional	POL	DDBJ	
+ddbj_conventional	PO	DDBJ	
 ddbj_conventional	Q	void	UniProt/Swiss-Prot
 ddbj_conventional	R	GenBank	EST
 ddbj_conventional	S	GenBank	Journal scanning
