@@ -1,5 +1,46 @@
 # DDBJ Japanese Genotype-phenotype Archive (JGA) XML Schema 
 
+## Changes to Common XML 1.2.0 on 2 March 2022
+
+### Instrument model changes  
+
+* New instrument model:  
+	* NextSeq 1000
+	* NextSeq 2000
+	* BGISEQ-500
+	* DNBSEQ-G400
+	* DNBSEQ-T7
+	* DNBSEQ-G50
+	* MGISEQ-2000RS
+	* Sequel II
+	* Ion GeneStudio S5
+	* Ion GeneStudio S5 plus
+	* Ion GeneStudio S5 prime
+
+## Changes to Experiment XML 1.2.0 on 2 March 2022    
+
+### Library strategy changes  
+
+* New library strategies:  
+	* NOMe-Seq 
+
+## Changes to Analysis XML 1.2.0 on 2 March 2022    
+
+### Analysis type changes  
+
+* New analysis types added:  
+	* ABUNDANCE_MEASUREMENT
+	* METABOLOMICS
+	* PROTEOMICS
+	* BIOCHEMICAL_ASSAY
+	* OTHER
+
+### Experiment type changes  
+
+* New experiment types for SEQUENCE_VARIATION added:  
+	* Short genetic variations
+	* Structural variations
+
 ## Changes to Common XML 1.1.0 on 22 November 2018  
 
 New schema effective from 22 November 2018: [JGA.common.xsd](https://github.com/ddbj/pub/blob/5525a5b5842515411ffb5a62730b2bf223819d8f/docs/jga/xsd/1-1/JGA.common.xsd)  
