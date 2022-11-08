@@ -424,6 +424,7 @@ protein_id	SAA-SZZ	ENA
 protein_id	TAA-TZZ	GenBank	WGS/TSA
 protein_id	UAA-UZZ	GenBank	
 protein_id	VAA-VZZ	ENA	
+protein_id	WAA-WZZ	GenBank	
 sra	DRA	DDBJ	Submission object
 sra	DRP	DDBJ	Study object
 sra	DRR	DDBJ	Run object
