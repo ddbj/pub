@@ -1,5 +1,12 @@
 # BioSample XML Schema, attributes and packages   
 
+## Changes on 17 May 2023   
+
+[ddbj_biosample_definition_table_v1.4.1.xlsx](https://github.com/ddbj/pub/blob/master/docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.4.1.xlsx)
+
+* Package set version: 1.4.1  
+* Changes: geo_loc_name and collection_date are required in all packages.  
+
 ## XML 1.2.0 for submission 12 April 2018   
 
 BioSample xsd for submission in which BioSampleSet has submitter_id and submission_id attributes.   
