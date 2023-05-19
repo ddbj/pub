@@ -1,8 +1,13 @@
 # DDBJ BioSample packages  
 
+## Changes on 17 May 2023
+[ddbj_biosample_definition_table_v1.4.1.xlsx](https://github.com/ddbj/pub/blob/master/docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.4.1.xlsx)
+
+* Package set version: 1.4.1  
+* Changes: geo_loc_name and collection_date are required in all packages.  
 ## Changes on 24 February 2022   
 
-[ddbj_biosample_definition_table.xlsx](https://github.com/ddbj/pub/blob/72054bad97a208e19c4cb6c6124ee202b5a2a131/docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.4.0.xlsx)
+[ddbj_biosample_definition_table_v1.4.0.xlsx](https://github.com/ddbj/pub/blob/master/docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.4.0.xlsx)
 
 * Package set version: 1.4.0  
 * New packages added. 
@@ -41,7 +46,7 @@ In the MIxS package, following attribute names are changed.
 
 ## Changes on 15 December 2021   
 
-[ddbj_biosample_definition_table.xlsx](https://github.com/ddbj/pub/blob/6e040b48efa18d87d78ba11c5516f027a0253ab2/docs/biosample/packages/ddbj_biosample_definition_table.xlsx)
+[ddbj_biosample_definition_table_v1.2.1.xlsx](https://github.com/ddbj/pub/blob/master/docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.2.1.xlsx)
 
 * Package set version: 1.2.1  
 * Changes: Strain is required in the MIGS.ba packages.  
@@ -59,7 +64,7 @@ This version is obsolete.
 
 ## Changes on 26 April 2018   
 
-[ddbj_biosample_definition_table.xlsx](https://github.com/ddbj/pub/blob/32ea23bd13a73794cd811f73575bff3a611d27a0/docs/biosample/packages/ddbj_biosample_definition_table.xlsx)  
+[ddbj_biosample_definition_table_v1.2.0.xlsx](https://github.com/ddbj/pub/blob/master/docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.2.0.xlsx)  
 
 * Package set version: 1.2.0  
 * Functional genomics package version: 1.0  
