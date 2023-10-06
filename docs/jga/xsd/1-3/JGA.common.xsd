@@ -544,7 +544,7 @@
                   <xs:element name="INSTRUMENT_MODEL" maxOccurs="1" minOccurs="1">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
-                        <xs:enumeration value="AB SOLiD System">
+                        <xs:enumeration value="AB SOLiD System"/>
                         <xs:enumeration value="AB SOLiD System 2.0"/>
                         <xs:enumeration value="AB SOLiD System 3.0"/>
                         <xs:enumeration value="AB SOLiD 3 Plus System"/>
@@ -614,6 +614,9 @@
               </xs:complexType>
             </xs:element>
             <xs:element name="PACBIO_SMRT">
+              <xs:annotation>
+                <xs:documentation> PacificBiosciences platform type for the single molecule real time (SMRT) technology. </xs:documentation>
+              </xs:annotation>
               <xs:complexType>
                 <xs:sequence>
                   <xs:element name="INSTRUMENT_MODEL" maxOccurs="1" minOccurs="1">
@@ -635,8 +638,7 @@
             </xs:element>
             <xs:element name="ION_TORRENT">
               <xs:annotation>
-                <xs:documentation>
-                    </xs:documentation>
+                <xs:documentation> Ion Torrent Personal Genome Machine (PGM) from Life Technologies. </xs:documentation>
               </xs:annotation>
               <xs:complexType>
                 <xs:sequence>
@@ -660,8 +662,7 @@
             </xs:element>
             <xs:element name="OXFORD_NANOPORE">
               <xs:annotation>
-                <xs:documentation>
-                    </xs:documentation>
+                <xs:documentation> Oxford Nanopore platform type. nanopore-based electronic single molecule analysis </xs:documentation>
               </xs:annotation>
               <xs:complexType>
                 <xs:sequence>

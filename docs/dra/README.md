@@ -59,7 +59,7 @@ PACBIO_SMRT
 * Sequel IIe
 * Onso
 * Revio
-* unspecifie
+* unspecified
 
 ION_TORRENT
 * Ion Torrent Genexus
