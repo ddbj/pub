@@ -118,6 +118,7 @@
                     <xs:enumeration value="tabix"/>
                     <xs:enumeration value="wig"/>
                     <xs:enumeration value="bed"/>
+                    <xs:enumeration value="hic"/>
                     <xs:enumeration value="gff"/>
                     <xs:enumeration value="mzML"/>
                     <xs:enumeration value="mzXML"/>
