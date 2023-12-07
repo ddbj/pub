@@ -5,6 +5,7 @@ DDBJ Center repository for public files
 
 * XML schema  
 * BioSample attributes and packages     
+* MetaboBank metadata excel template files
 
 ## rules  
 
