@@ -406,6 +406,7 @@ ddbj_bulk	AAAAAA-AZZZZZ	GenBank	general WGS
 ddbj_bulk	BAAAAA-BZZZZZ	DDBJ	general WGS
 ddbj_bulk	CAAAAA-CZZZZZ	ENA	WGS
 ddbj_bulk	DAAAAA-DZZZZZ	GenBank	TPA assemble WGS
+ddbj_bulk	EAAAAA-EZZZZZ	DDBJ	TPA assemble WGS
 ddbj_bulk	JAAAAA-JZZZZZ	GenBank	general WGS
 protein_id	AAA-AZZ	GenBank	
 protein_id	AAE	USPTO	Patent application
@@ -431,6 +432,7 @@ protein_id	TAA-TZZ	GenBank	WGS/TSA
 protein_id	UAA-UZZ	GenBank	
 protein_id	VAA-VZZ	ENA	
 protein_id	WAA-WZZ	GenBank	
+protein_id	XAA-XZZ	GenBank	
 sra	DRA	DDBJ	Submission object
 sra	DRP	DDBJ	Study object
 sra	DRR	DDBJ	Run object
