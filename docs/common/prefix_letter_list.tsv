@@ -366,6 +366,7 @@ ddbj_conventional	PN	DDBJ
 ddbj_conventional	PO	DDBJ	
 ddbj_conventional	PP	GenBank	Direct submission
 ddbj_conventional	PR	USPTO	Patent application
+ddbj_conventional	PS	GenBank	scaffold/CON
 ddbj_conventional	Q	void	UniProt/Swiss-Prot
 ddbj_conventional	R	GenBank	EST
 ddbj_conventional	S	GenBank	Journal scanning
