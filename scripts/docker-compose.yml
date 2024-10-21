@@ -1,0 +1,11 @@
+services:
+  ruby:
+    container_name: ddbj_pub_scripts_ruby
+    build:
+      context: .
+      dockerfile: Dockerfile.ruby
+    image: ddbj_pub_scripts_ruby
+    user: ${UID:-0}:${GID:-0}
+    volumes:
+      - ${PWD}:/usr/src/app
+      - ${PWD}/../docs:/docs/
