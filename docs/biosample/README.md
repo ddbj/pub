@@ -7,16 +7,16 @@
 * Package set version: 1.5.0  
 * Changes:
 	* MIxS packages
-	* [MIxS v6.0](https://www.gensc.org//news/2022/04/01/MIxSv6.0-release.html) released
-	* New enviroment packages
-		* agriculture
-		* food-animal and animal feed
-		* food-farm environment
-		* food-food production facility
-		* food-human foods
-		* hydrocarbon resources-cores
-		* hydrocarbon resources-fluids/swabs
-		* symbiont-associated
+		* [MIxS v6.0](https://www.gensc.org//news/2022/04/01/MIxSv6.0-release.html) released
+			* New enviroment packages
+				* agriculture
+				* food-animal and animal feed
+				* food-farm environment
+				* food-food production facility
+				* food-human foods
+				* hydrocarbon resources-cores
+				* hydrocarbon resources-fluids/swabs
+				* symbiont-associated
 	* Standards packages
 		* Plant: strain added
 		* MIMAG/MIUVIG: derived_from required
