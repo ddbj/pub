@@ -1,13 +1,13 @@
 # BioSample XML Schema, attributes and packages   
 
-## Changes on xx October 2024   
+## Changes on 6 November 2024   
 
 [ddbj_biosample_definition_table_v1.5.0.xlsx](https://github.com/ddbj/pub/blob/master/docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.5.0.xlsx)
 
 * Package set version: 1.5.0  
 * Changes:
 	* MIxS packages
-		* [MIxS v6.0](https://www.gensc.org//news/2022/04/01/MIxSv6.0-release.html) released
+		* [MIxS v6.0](https://www.gensc.org/news/2022/04/01/MIxSv6.0-release.html) released
 		* New enviroment packages
 			* agriculture
 			* food-animal and animal feed
