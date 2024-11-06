@@ -1,5 +1,27 @@
 # BioSample XML Schema, attributes and packages   
 
+## Changes on 6 November 2024   
+
+[ddbj_biosample_definition_table_v1.5.0.xlsx](https://github.com/ddbj/pub/blob/master/docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.5.0.xlsx)
+
+* Package set version: 1.5.0  
+* Changes:
+	* MIxS packages
+		* [MIxS v6.0](https://www.gensc.org/news/2022/04/01/MIxSv6.0-release.html) released
+		* New enviroment packages
+			* agriculture
+			* food-animal and animal feed
+			* food-farm environment
+			* food-food production facility
+			* food-human foods
+			* hydrocarbon resources-cores
+			* hydrocarbon resources-fluids/swabs
+			* symbiont-associated
+	* Standards packages
+		* Plant: strain added
+		* MIMAG/MIUVIG: derived_from required
+		* MIUVIG: metagenome_source required
+
 ## Changes on 17 May 2023   
 
 [ddbj_biosample_definition_table_v1.4.1.xlsx](https://github.com/ddbj/pub/blob/master/docs/biosample/packages/archives/ddbj_biosample_definition_table_v1.4.1.xlsx)
