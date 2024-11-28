@@ -41,6 +41,7 @@ LS454
 ILLUMINA
 * Illumina HiSeq X
 * Illumina NovaSeq X
+* Illumina NovaSeq X Plus
 * unspecified
 
 HELICOS
