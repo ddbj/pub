@@ -1,5 +1,12 @@
 # DDBJ Sequence Read Archive (DRA) XML Schema
 
+## Changes to Common XML 1.6.1 on yy xx 2025
+
+### New instrument models
+
+ILLUMINA
+* Illumina NovaSeq X Plus
+
 ## Changes to Common XML 1.6.0 on 14 February 2024
 
 ### New platforms and instrument models

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- INSDC Sequence Read Archive resource Common object XML specification -->
-<!-- version:1.6.0 -->
+<!-- version:1.6.1 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
   <xs:attributeGroup name="NameGroup">
@@ -662,6 +662,7 @@
       <xs:enumeration value="Illumina HiScanSQ"/>
       <xs:enumeration value="Illumina NovaSeq 6000"/>
       <xs:enumeration value="Illumina NovaSeq X"/>
+      <xs:enumeration value="Illumina NovaSeq X Plus"/>
       <xs:enumeration value="Illumina MiSeq"/>
       <xs:enumeration value="Illumina MiniSeq"/>
       <xs:enumeration value="Illumina iSeq 100"/>
