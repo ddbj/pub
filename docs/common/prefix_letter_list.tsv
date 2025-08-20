@@ -379,8 +379,8 @@ ddbj_conventional	QL	EPO	Patent application
 ddbj_conventional	QM	EPO	Patent application
 ddbj_conventional	QN	EPO	Patent application
 ddbj_conventional	QO	EPO	Patent application
-ddbj_conventional	QP	DDBJ	
-ddbj_conventional	QQ	DDBJ	
+ddbj_conventional	QP	JPO	Patent application
+ddbj_conventional	QQ	JPO	Patent application
 ddbj_conventional	QR	DDBJ	
 ddbj_conventional	QS	DDBJ	
 ddbj_conventional	QT	DDBJ	
@@ -465,6 +465,7 @@ protein_id	VAA-VZZ	ENA
 protein_id	WAA-WZZ	GenBank	
 protein_id	XAA-XZZ	GenBank	
 protein_id	YAA-YZZ	GenBank	primary/TPA
+protein_id	ZAA-ZZZ	JPO/KIPO	Patent application
 sra	DRA	DDBJ	Submission object
 sra	DRP	DDBJ	Study object
 sra	DRR	DDBJ	Run object
