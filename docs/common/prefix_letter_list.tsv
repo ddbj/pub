@@ -373,6 +373,7 @@ ddbj_conventional	PU	USPTO	Patent application
 ddbj_conventional	PV	GenBank	Direct submission
 ddbj_conventional	PW	KIPO	Patent application
 ddbj_conventional	PX	GenBank	Direct submission
+ddbj_conventional	PY	USPTO	Patent application
 ddbj_conventional	Q	void	UniProt/Swiss-Prot
 ddbj_conventional	QK	EPO	Patent application
 ddbj_conventional	QL	EPO	Patent application
