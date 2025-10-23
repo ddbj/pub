@@ -1,5 +1,92 @@
 # DDBJ Japanese Genotype-phenotype Archive (JGA) XML Schema 
 
+## Changes to Common XML 1.3.0 on 22 October 2025
+
+### New platforms and instrument models
+
+GENAPSYS
+* GS111
+* unspecified
+
+DNBSEQ
+* DNBSEQ-G400
+* DNBSEQ-G400 FAST
+* DNBSEQ-T7
+* DNBSEQ-G50
+* unspecified
+
+ELEMENT
+* Element AVITI
+* unspecified
+
+GENEMIND
+* GenoCare 1600
+* GenoLab M
+* FASTASeq 300
+* unspecified
+
+ULTIMA
+* UG 100
+* unspecified
+
+TAPESTRI
+* Tapestri
+* unspecified
+
+### New instrument models
+
+LS454
+* unspecified
+
+ILLUMINA
+* Illumina HiSeq X
+* Illumina NovaSeq X
+* Illumina NovaSeq X Plus
+* unspecified
+
+HELICOS
+* unspecified
+
+ABI_SOLID
+* unspecified
+
+COMPLETE_GENOMICS
+* unspecified
+
+BGISEQ
+* BGISEQ-50
+
+PACBIO_SMRT
+* Sequel IIe
+* Onso
+* Revio
+* unspecified
+
+ION_TORRENT
+* Ion Torrent Genexus
+
+CAPILLARY
+* unspecified
+
+OXFORD_NANOPORE
+* unspecified
+
+VELA_DIAGNOSTICS
+* unspecified
+
+### Instrument model moves
+
+The following three models were moved from BGISEQ to DNBSEQ.
+
+BGISEQ
+* DNBSEQ-G400
+* DNBSEQ-T7
+* DNBSEQ-G50
+
+### Platform name changes
+
+* Vela_Diagnostics to VELA_DIAGNOSTICS
+
 ## Changes to Common XML 1.2.0 on 2 March 2022
 
 ### Instrument model changes  
