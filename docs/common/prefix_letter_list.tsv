@@ -382,7 +382,7 @@ ddbj_conventional	QN	EPO	Patent application
 ddbj_conventional	QO	EPO	Patent application
 ddbj_conventional	QP	JPO	Patent application
 ddbj_conventional	QQ	JPO	Patent application
-ddbj_conventional	QR	DDBJ	
+ddbj_conventional	QR	JPO	Patent application
 ddbj_conventional	QS	DDBJ	
 ddbj_conventional	QT	DDBJ	
 ddbj_conventional	QU	DDBJ	
@@ -400,6 +400,7 @@ ddbj_conventional	RG	DDBJ
 ddbj_conventional	RH	DDBJ	
 ddbj_conventional	RI	DDBJ	
 ddbj_conventional	RJ	DDBJ	
+ddbj_conventional	RJ	EPO	Patent application
 ddbj_conventional	S	GenBank	Journal scanning
 ddbj_conventional	T	GenBank	EST
 ddbj_conventional	U	GenBank	
