@@ -375,6 +375,16 @@ ddbj_conventional	PW	KIPO	Patent application
 ddbj_conventional	PX	GenBank	Direct submission
 ddbj_conventional	PY	USPTO	Patent application
 ddbj_conventional	Q	void	UniProt/Swiss-Prot
+ddbj_conventional	QA	GenBank	Direct submission
+ddbj_conventional	QB	GenBank	Direct submission
+ddbj_conventional	QC	GenBank	Direct submission
+ddbj_conventional	QD	GenBank	Direct submission
+ddbj_conventional	QE	GenBank	Direct submission
+ddbj_conventional	QF	GenBank	Direct submission
+ddbj_conventional	QG	GenBank	Direct submission
+ddbj_conventional	QH	GenBank	Direct submission
+ddbj_conventional	QI	GenBank	Direct submission
+ddbj_conventional	QJ	GenBank	Direct submission
 ddbj_conventional	QK	EPO	Patent application
 ddbj_conventional	QL	EPO	Patent application
 ddbj_conventional	QM	EPO	Patent application
@@ -400,7 +410,7 @@ ddbj_conventional	RG	DDBJ
 ddbj_conventional	RH	DDBJ	
 ddbj_conventional	RI	DDBJ	
 ddbj_conventional	RJ	DDBJ	
-ddbj_conventional	RJ	EPO	Patent application
+ddbj_conventional	RK	EPO	Patent application
 ddbj_conventional	S	GenBank	Journal scanning
 ddbj_conventional	T	GenBank	EST
 ddbj_conventional	U	GenBank	
