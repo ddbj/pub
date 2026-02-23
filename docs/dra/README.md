@@ -1,5 +1,39 @@
 # DDBJ Sequence Read Archive (DRA) XML Schema
 
+## Changes to Common XML 1.6.1 on xx March 2026
+
+### New instrument models
+
+ILLUMINA
+* Illumina NovaSeq X Plus
+* Illumina MiSeq i100
+* Illumina MiSeq i100 Plus
+
+BGISEQ
+* CycloneSEQ
+* unspecified
+
+DNBSEQ
+* DNBSEQ-T1+
+
+GENEMIND
+* SURFSeq 5000
+* SURFSeq Q
+
+SALUS
+* Saluseq Nimbo
+* Salus Pro
+* Salus EVO
+* unspecified
+
+GENEUS_TECH
+* G-seq500
+* unspecified
+
+SINGULAR_GENOMICS
+* G4
+* unspecified
+
 ## Changes to Common XML 1.6.0 on 14 February 2024
 
 ### New platforms and instrument models
