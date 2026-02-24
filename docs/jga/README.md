@@ -5,7 +5,6 @@
 ### New platforms and instrument models
 
 ILLUMINA
-* Illumina NovaSeq X Plus
 * Illumina MiSeq i100
 * Illumina MiSeq i100 Plus
 
