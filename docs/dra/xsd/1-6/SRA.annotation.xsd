@@ -4,7 +4,7 @@
 
     <!-- <xs:import schemaLocation="http://www.ncbi.nlm.nih.gov/viewvc/v1/trunk/sra/doc/SRA_1-5a/SRA.common.xsd?view=co"
         namespace="SRA.common"/>
-    -->
+     -->
     <xs:import schemaLocation="SRA.common.xsd" namespace="SRA.common"/>
 
     <xs:simpleType name="statusType">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- INSDC Sequence Read Archive resource Analysis (SRZ/ERZ/DRZ) object XML specification -->
+<!-- INSDC Sequence Read Archive resource Analysis (SRZ/ERZ/DRZ) object XML specification  -->
 <!-- version:1.6.1 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
