@@ -1,6 +1,6 @@
 # DDBJ Japanese Genotype-phenotype Archive (JGA) XML Schema 
 
-## Changes to Common XML 1.3.1 on xx March 2026
+## Changes to Common XML 1.3.1 on 19 March 2026
 
 ### New platforms and instrument models
 
