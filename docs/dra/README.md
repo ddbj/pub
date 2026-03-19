@@ -1,6 +1,6 @@
 # DDBJ Sequence Read Archive (DRA) XML Schema
 
-## Changes to Common XML 1.6.1 on xx March 2026
+## Changes to Common XML 1.6.1 on 19 March 2026
 
 ### New instrument models
 
