@@ -591,6 +591,7 @@
                         <xs:enumeration value="BGISEQ-500"/>
                         <xs:enumeration value="MGISEQ-2000RS"/>
                         <xs:enumeration value="CycloneSEQ"/>
+                        <xs:enumeration value="unspecified"/>
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
