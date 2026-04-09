@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- DDBJ JGA Analysis object XML specification -->
-<!-- version:1.3.0 -->
+<!-- version:1.3.1 -->
 <xs:schema xmlns:com="JGA.common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:import namespace="JGA.common" schemaLocation="JGA.common.xsd"/>
     <xs:complexType name="AnalysisFileType">

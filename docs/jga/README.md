@@ -1,5 +1,38 @@
 # DDBJ Japanese Genotype-phenotype Archive (JGA) XML Schema 
 
+## Changes to Common XML 1.3.1 on 9 April 2026
+
+### New platforms and instrument models
+
+ILLUMINA
+* Illumina MiSeq i100
+* Illumina MiSeq i100 Plus
+
+BGISEQ
+* CycloneSEQ
+* unspecified
+
+DNBSEQ
+* DNBSEQ-T1+
+
+GENEMIND
+* SURFSeq 5000
+* SURFSeq Q
+
+SALUS
+* Saluseq Nimbo
+* Salus Pro
+* Salus EVO
+* unspecified
+
+GENEUS_TECH
+* G-seq500
+* unspecified
+
+SINGULAR_GENOMICS
+* G4
+* unspecified
+
 ## Changes to Common XML 1.3.0 on 22 October 2025
 
 ### New platforms and instrument models

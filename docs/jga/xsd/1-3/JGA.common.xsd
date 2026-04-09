@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- DDBJ JGA Common object XML specification -->
-<!-- version:1.3.0 -->
+<!-- version:1.3.1 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:com="JGA.common" targetNamespace="JGA.common">
   <xs:attributeGroup name="NameGroup">
     <xs:attribute name="alias" type="xs:string" use="optional">
@@ -511,7 +511,9 @@
                         <xs:enumeration value="Illumina NovaSeq 6000"/>
                         <xs:enumeration value="Illumina NovaSeq X"/>
                         <xs:enumeration value="Illumina NovaSeq X Plus"/>
-												<xs:enumeration value="Illumina MiSeq"/>
+                        <xs:enumeration value="Illumina MiSeq"/>
+                        <xs:enumeration value="Illumina MiSeq i100"/>
+                        <xs:enumeration value="Illumina MiSeq i100 Plus"/>                        
                         <xs:enumeration value="Illumina MiniSeq"/>
                         <xs:enumeration value="Illumina iSeq 100"/>
                         <xs:enumeration value="NextSeq 500"/>
@@ -588,6 +590,8 @@
                         <xs:enumeration value="BGISEQ-50"/>
                         <xs:enumeration value="BGISEQ-500"/>
                         <xs:enumeration value="MGISEQ-2000RS"/>
+                        <xs:enumeration value="CycloneSEQ"/>
+                        <xs:enumeration value="unspecified"/>
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
@@ -607,6 +611,7 @@
                         <xs:enumeration value="DNBSEQ-G400 FAST"/>
                         <xs:enumeration value="DNBSEQ-T7"/>
                         <xs:enumeration value="DNBSEQ-G50"/>
+                        <xs:enumeration value="DNBSEQ-T1+"/>
                         <xs:enumeration value="unspecified"/>
                       </xs:restriction>
                     </xs:simpleType>
@@ -744,6 +749,8 @@
                         <xs:enumeration value="GenoCare 1600"/>
                         <xs:enumeration value="GenoLab M"/>
                         <xs:enumeration value="FASTASeq 300"/>
+                        <xs:enumeration value="SURFSeq 5000"/>
+                        <xs:enumeration value="SURFSeq Q"/>
                         <xs:enumeration value="unspecified"/>
                       </xs:restriction>
                     </xs:simpleType>
@@ -794,6 +801,59 @@
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:enumeration value="Tapestri"/>
+                        <xs:enumeration value="unspecified"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="SALUS">
+              <xs:annotation>
+                <xs:documentation></xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="INSTRUMENT_MODEL" maxOccurs="1" minOccurs="1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Saluseq Nimbo"/>
+                        <xs:enumeration value="Salus Pro"/>
+                        <xs:enumeration value="Salus EVO"/>
+                        <xs:enumeration value="unspecified"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="GENEUS_TECH">
+              <xs:annotation>
+                <xs:documentation></xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="INSTRUMENT_MODEL" maxOccurs="1" minOccurs="1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="G-seq500"/>
+                        <xs:enumeration value="unspecified"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="SINGULAR_GENOMICS">
+              <xs:annotation>
+                <xs:documentation></xs:documentation>
+              </xs:annotation>
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="INSTRUMENT_MODEL" maxOccurs="1" minOccurs="1">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="G4"/>
                         <xs:enumeration value="unspecified"/>
                       </xs:restriction>
                     </xs:simpleType>
