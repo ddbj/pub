@@ -87,7 +87,7 @@ ddbj_conventional	DE	DDBJ	GSS
 ddbj_conventional	DF	DDBJ	scaffold/CON
 ddbj_conventional	DG	DDBJ	CON
 ddbj_conventional	DH	DDBJ	GSS
-ddbj_conventional	DI	KIPO	Patent application
+ddbj_conventional	DI	MOIP	Patent application
 ddbj_conventional	DJ	JPO	Patent application
 ddbj_conventional	DK	DDBJ	EST
 ddbj_conventional	DL	JPO	Patent application
@@ -274,7 +274,7 @@ ddbj_conventional	LC	DDBJ	Direct submission
 ddbj_conventional	LD	DDBJ	scaffold/CON
 ddbj_conventional	LE	DDBJ	TSA (Transcriptome Shotgun Assembly)
 ddbj_conventional	LF	JPO	Patent application
-ddbj_conventional	LG	KIPO	Patent application
+ddbj_conventional	LG	MOIP	Patent application
 ddbj_conventional	LH	DDBJ	TSA (Transcriptome Shotgun Assembly)
 ddbj_conventional	LI	DDBJ	TSA (Transcriptome Shotgun Assembly)
 ddbj_conventional	LJ	DDBJ	TSA (Transcriptome Shotgun Assembly)
@@ -291,7 +291,7 @@ ddbj_conventional	LT	ENA
 ddbj_conventional	LU	DDBJ	EST
 ddbj_conventional	LV	JPO	Patent application
 ddbj_conventional	LX	JPO	Patent application
-ddbj_conventional	LY	KIPO	Patent application
+ddbj_conventional	LY	MOIP	Patent application
 ddbj_conventional	LZ	JPO	Patent application
 ddbj_conventional	M	GenBank	
 ddbj_conventional	MA	JPO	Patent application
@@ -327,7 +327,7 @@ ddbj_conventional	OB	ENA
 ddbj_conventional	OC	ENA	
 ddbj_conventional	OD	ENA	
 ddbj_conventional	OE	ENA	
-ddbj_conventional	OF	KIPO	Patent application
+ddbj_conventional	OF	MOIP	Patent application
 ddbj_conventional	OG	JPO	Patent application
 ddbj_conventional	OH	DDBJ	EST
 ddbj_conventional	OI	JPO	Patent application
@@ -353,14 +353,14 @@ ddbj_conventional	PA	JPO	Patent application
 ddbj_conventional	PB	JPO	Patent application
 ddbj_conventional	PC	JPO	Patent application
 ddbj_conventional	PD	JPO	Patent application
-ddbj_conventional	PE	KIPO	Patent application
-ddbj_conventional	PF	KIPO	Patent application
+ddbj_conventional	PE	MOIP	Patent application
+ddbj_conventional	PF	MOIP	Patent application
 ddbj_conventional	PG	JPO	Patent application
 ddbj_conventional	PH	JPO	Patent application
 ddbj_conventional	PI	JPO	Patent application
 ddbj_conventional	PJ	JPO	Patent application
 ddbj_conventional	PK	JPO	Patent application
-ddbj_conventional	PL	KIPO	Patent application
+ddbj_conventional	PL	MOIP	Patent application
 ddbj_conventional	PM	JPO	Patent application
 ddbj_conventional	PN	JPO	Patent application
 ddbj_conventional	PO	JPO	Patent application
@@ -371,21 +371,21 @@ ddbj_conventional	PS	GenBank	scaffold/CON
 ddbj_conventional	PT	USPTO	Patent application
 ddbj_conventional	PU	USPTO	Patent application
 ddbj_conventional	PV	GenBank	Direct submission
-ddbj_conventional	PW	KIPO	Patent application
+ddbj_conventional	PW	MOIP	Patent application
 ddbj_conventional	PX	GenBank	Direct submission
 ddbj_conventional	PY	USPTO	Patent application
 ddbj_conventional	PZ	GenBank	Direct submission
 ddbj_conventional	Q	void	UniProt/Swiss-Prot
-ddbj_conventional	QA	GenBank	Direct submission
-ddbj_conventional	QB	GenBank	Direct submission
-ddbj_conventional	QC	GenBank	Direct submission
-ddbj_conventional	QD	GenBank	Direct submission
-ddbj_conventional	QE	GenBank	Direct submission
-ddbj_conventional	QF	GenBank	Direct submission
-ddbj_conventional	QG	GenBank	Direct submission
-ddbj_conventional	QH	GenBank	Direct submission
-ddbj_conventional	QI	GenBank	Direct submission
-ddbj_conventional	QJ	GenBank	Direct submission
+ddbj_conventional	QA	USPTO	Patent application
+ddbj_conventional	QB	GenBank	
+ddbj_conventional	QC	GenBank	
+ddbj_conventional	QD	GenBank	
+ddbj_conventional	QE	GenBank	
+ddbj_conventional	QF	GenBank	
+ddbj_conventional	QG	GenBank	
+ddbj_conventional	QH	GenBank	
+ddbj_conventional	QI	GenBank	
+ddbj_conventional	QJ	GenBank	
 ddbj_conventional	QK	EPO	Patent application
 ddbj_conventional	QL	EPO	Patent application
 ddbj_conventional	QM	EPO	Patent application
@@ -478,7 +478,7 @@ protein_id	VAA-VZZ	ENA
 protein_id	WAA-WZZ	GenBank	
 protein_id	XAA-XZZ	GenBank	
 protein_id	YAA-YZZ	GenBank	primary/TPA
-protein_id	ZAA-ZZZ	JPO/KIPO	Patent application
+protein_id	ZAA-ZZZ	JPO/MOIP	Patent application
 sra	DRA	DDBJ	Submission object
 sra	DRP	DDBJ	Study object
 sra	DRR	DDBJ	Run object
